@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -46,7 +45,7 @@ func TestSwitch(t *testing.T) {
 		return result
 	}
 
-	fmt.Println(whatAmI(true))
+	assert.Equal(t, (whatAmI(true)), "boolean")
 	whatAmI(1)
 	whatAmI("hey")
 }
