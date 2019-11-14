@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -23,6 +22,6 @@ func TestIfElse(t *testing.T) {
 	} else if num < 10 {
 		assert.Equal(t, true, num == 0, "this won't trigger")
 	} else {
-		fmt.Println(num, "has multiple digits")
+		assert.Equal(t, true, num > 10, "nor will this")
 	}
 }
