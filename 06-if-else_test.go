@@ -19,7 +19,7 @@ func TestIfElse(t *testing.T) {
 	}
 
 	if num := 9; num < 0 {
-		assert.Equal(t, true, num > 0)
+		assert.Equal(t, true, num == 0)
 	} else if num < 10 {
 		fmt.Println(num, "has 1 digit")
 	} else {
