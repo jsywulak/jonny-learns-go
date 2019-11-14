@@ -10,14 +10,13 @@ import (
 
 func TestSwitch(t *testing.T) {
 	i := 2
-	fmt.Print("Write ", i, " as ")
 	switch i {
 	case 1:
 		assert.True(t, false, "shouldn't get here")
 	case 2:
-		fmt.Println("two")
+		assert.True(t, true, "should've gotten here")
 	case 3:
-		fmt.Println("three")
+		assert.True(t, false, "shouldn't get here")
 	}
 
 	switch time.Now().Weekday() {
