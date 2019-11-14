@@ -47,7 +47,5 @@ func TestSwitch(t *testing.T) {
 
 	assert.Equal(t, (whatAmI(true)), "boolean")
 	assert.Equal(t, (whatAmI(1)), "integer")
-	whatAmI(1)
 	assert.Equal(t, (whatAmI("hey")), "unknown")
-	whatAmI("hey")
 }
