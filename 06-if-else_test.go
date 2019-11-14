@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestIfElse(t *testing.T) {
 	if 7%2 == 0 {
-		fmt.Println("7 is even")
+		assert.Equal(t, 0, 7%2)
 	} else {
-		fmt.Println("7 is odd")
+		assert.Equal(t, 1, 7%2)
 	}
 
 	if 8%4 == 0 {
