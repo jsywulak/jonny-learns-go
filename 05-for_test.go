@@ -21,10 +21,14 @@ func TestFor(t *testing.T) {
 	}
 	assert.Equal(t, 10, j)
 
+	k := "original"
 	for {
-		fmt.Println("loop")
 		break
+		k = "sequel"
 	}
+
+	assert.Equal(t, "original", j)
+
 	for n := 0; n <= 5; n++ {
 		if n%2 == 0 {
 			continue
