@@ -33,6 +33,6 @@ func TestFor(t *testing.T) {
 		if n%2 == 0 {
 			continue
 		}
-		fmt.Println(n)
+		assert.Equal(t, 0, n%2)
 	}
 }
