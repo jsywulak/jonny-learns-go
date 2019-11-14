@@ -39,7 +39,7 @@ func TestSwitch(t *testing.T) {
 		case bool:
 			result = "boolean"
 		case int:
-			fmt.Println("I'm an integer")
+			result = "int"
 		default:
 			fmt.Printf("I dunno type %T\n", t)
 		}
