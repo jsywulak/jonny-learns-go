@@ -14,9 +14,11 @@ func TestFor(t *testing.T) {
 		i = i + 1
 	}
 	assert.Equal(t, 4, i)
+
 	for j := 7; j <= 9; j++ {
-		fmt.Println(j)
+
 	}
+	assert.Equal(t, 9, j)
 	for {
 		fmt.Println("loop")
 		break
