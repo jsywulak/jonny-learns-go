@@ -15,11 +15,11 @@ func TestIfElse(t *testing.T) {
 	}
 
 	if 8%4 == 0 {
-		fmt.Println("8 is divisible by 4")
+		assert.Equal(t, 0, 8%4)
 	}
 
 	if num := 9; num < 0 {
-		fmt.Println(num, "is negative")
+		assert.Equal(t, true, num < 0)
 	} else if num < 10 {
 		fmt.Println(num, "has 1 digit")
 	} else {
