@@ -19,12 +19,19 @@ func TestSwitch(t *testing.T) {
 		assert.True(t, false, "shouldn't get here")
 	}
 
+
+	isWeekend = false
 	switch time.Now().Weekday() {
 	case time.Saturday, time.Sunday:
-		fmt.Println("It's the weekend")
+		isWeekend = true
 	default:
-		fmt.Println("It's a weekday")
+		isWeekend = false
 	}
+
+	if time.Now().Weekday() == time.Saturday || time.Now().Weekday() == time.Sunday
+		assertTrue(t, isWeekend, "it's the weekend")
+	else
+		assertFalse(t, isWeekend, "it's a weekday")
 
 	whatAmI := func(i interface{}) {
 		switch t := i.(type) {
