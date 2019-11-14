@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -45,7 +46,7 @@ func TestSwitch(t *testing.T) {
 		return result
 	}
 
-	whatAmI(true)
+	fmt.Println(whatAmI(true))
 	whatAmI(1)
 	whatAmI("hey")
 }
