@@ -21,7 +21,7 @@ func TestIfElse(t *testing.T) {
 	if num := 9; num < 10 {
 		assert.Equal(t, true, num < 10, "number should be less than 10")
 	} else if num < 10 {
-		assert.Equal(t, true, num == 0)
+		assert.Equal(t, true, num == 0, "this won't trigger")
 	} else {
 		fmt.Println(num, "has multiple digits")
 	}
