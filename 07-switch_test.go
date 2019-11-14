@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"testing"
-	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -19,19 +18,18 @@ func TestSwitch(t *testing.T) {
 		assert.True(t, false, "shouldn't get here")
 	}
 
+	// isWeekend = false
+	// switch time.Now().Weekday() {
+	// case time.Saturday, time.Sunday:
+	// 	isWeekend = true
+	// default:
+	// 	isWeekend = false
+	// }
 
-	isWeekend = false
-	switch time.Now().Weekday() {
-	case time.Saturday, time.Sunday:
-		isWeekend = true
-	default:
-		isWeekend = false
-	}
-
-	if time.Now().Weekday() == time.Saturday || time.Now().Weekday() == time.Sunday
-		assertTrue(t, isWeekend, "it's the weekend")
-	else
-		assertFalse(t, isWeekend, "it's a weekday")
+	// if time.Now().Weekday() == time.Saturday || time.Now().Weekday() == time.Sunday
+	// 	assertTrue(t, isWeekend, "it's the weekend")
+	// else
+	// 	assertFalse(t, isWeekend, "it's a weekday")
 
 	whatAmI := func(i interface{}) {
 		switch t := i.(type) {
