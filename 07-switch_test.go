@@ -11,7 +11,7 @@ func TestSwitch(t *testing.T) {
 	fmt.Print("Write ", i, " as ")
 	switch i {
 	case 1:
-		fmt.Println("one")
+		assert.True(t, "false", "shouldn't get here")
 	case 2:
 		fmt.Println("two")
 	case 3:
