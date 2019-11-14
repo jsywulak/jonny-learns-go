@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestIfElse() {
+func TestIfElse(t *testing.T) {
 	if 7%2 == 0 {
 		fmt.Println("7 is even")
 	} else {
