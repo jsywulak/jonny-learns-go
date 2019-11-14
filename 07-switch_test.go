@@ -18,7 +18,7 @@ func TestSwitch(t *testing.T) {
 		assert.True(t, false, "shouldn't get here")
 	}
 
-	// isWeekend = false
+	isWeekend := false
 	// switch time.Now().Weekday() {
 	// case time.Saturday, time.Sunday:
 	// 	isWeekend = true
