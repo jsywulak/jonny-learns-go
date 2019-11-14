@@ -13,7 +13,7 @@ func TestFor(t *testing.T) {
 		fmt.Println(i)
 		i = i + 1
 	}
-	assert.Equal(t, 3, i)
+	assert.Equal(t, 4, i)
 	fmt.Println("---")
 	for j := 7; j <= 9; j++ {
 		fmt.Println(j)
