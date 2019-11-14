@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -10,7 +9,6 @@ import (
 func TestFor(t *testing.T) {
 	i := 1
 	for i <= 3 {
-		fmt.Println(i)
 		i = i + 1
 	}
 	assert.Equal(t, 4, i)
