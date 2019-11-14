@@ -21,7 +21,7 @@ func TestIfElse(t *testing.T) {
 		assert.Equal(t, true, num < 10, "number should be less than 10")
 	} else if num < 20 {
 		assert.Equal(t, true, num < 20, "this won't trigger")
-	} // else {
-	// 	assert.Equal(t, true, num > 10, "nor will this")
-	// }
+	} else {
+		assert.Equal(t, true, num > 20, "nor will this")
+	}
 }
