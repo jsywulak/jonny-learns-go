@@ -27,7 +27,7 @@ func TestFor(t *testing.T) {
 		k = "sequel"
 	}
 
-	assert.Equal(t, "original", j)
+	assert.Equal(t, "original", k)
 
 	for n := 0; n <= 5; n++ {
 		if n%2 == 0 {
