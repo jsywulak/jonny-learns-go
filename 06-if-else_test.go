@@ -18,6 +18,8 @@ func TestIfElse(t *testing.T) {
 		assert.Equal(t, 0, 8%4)
 	}
 
+	assert(t, false)
+
 	if num := 9; num < 0 {
 		assert.Equal(t, true, num == 0)
 	} else if num < 10 {
