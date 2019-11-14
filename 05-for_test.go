@@ -15,6 +15,7 @@ func TestFor(t *testing.T) {
 	}
 	assert.Equal(t, 4, i)
 
+	j := 7
 	for j := 7; j <= 9; j++ {
 
 	}
