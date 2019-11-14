@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"testing"
 	"time"
 )
 
-func TestSwitch() {
+func TestSwitch(t *testing.T) {
 	i := 2
 	fmt.Print("Write ", i, " as ")
 	switch i {
