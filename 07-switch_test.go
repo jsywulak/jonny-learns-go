@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -40,7 +41,7 @@ func TestSwitch(t *testing.T) {
 		case int:
 			result = "integer"
 		default:
-			result = "unknown"
+			fmt.Printf("I dunno type %T\n", t)
 		}
 		return result
 	}
