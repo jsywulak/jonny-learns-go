@@ -19,9 +19,9 @@ func TestIfElse(t *testing.T) {
 	}
 
 	if num := 9; num < 0 {
-		assert.Equal(t, true, num == 0)
+		assert.Equal(t, true, num == 0, "number should be less than 10")
 	} else if num < 10 {
-		fmt.Println(num, "has 1 digit")
+		assert.Equal(t, true, num == 0)
 	} else {
 		fmt.Println(num, "has multiple digits")
 	}
