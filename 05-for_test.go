@@ -20,6 +20,7 @@ func TestFor(t *testing.T) {
 
 	}
 	assert.Equal(t, 10, j)
+
 	for {
 		fmt.Println("loop")
 		break
