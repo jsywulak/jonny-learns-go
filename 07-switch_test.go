@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -35,13 +34,13 @@ func TestSwitch(t *testing.T) {
 
 	whatAmI := func(i interface{}) string {
 		result := ""
-		switch t := i.(type) {
+		switch i.(type) {
 		case bool:
 			result = "boolean"
 		case int:
 			result = "integer"
 		default:
-			fmt.Printf("I dunno type %T\n", t)
+			result = "unknown"
 		}
 		return result
 	}
