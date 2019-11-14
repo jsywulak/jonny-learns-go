@@ -19,7 +19,7 @@ func TestFor(t *testing.T) {
 	for j = 7; j <= 9; j++ {
 
 	}
-	assert.Equal(t, 9, j)
+	assert.Equal(t, 10, j)
 	for {
 		fmt.Println("loop")
 		break
