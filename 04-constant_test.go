@@ -18,6 +18,6 @@ func TestConstants(t *testing.T) {
 	const n = 500000000
 	const d = 3e20 / n
 	assert.Equal(t, 6e+11, d)
-	assert.Equal(t, 600000000000, int64(d))
+	assert.Equal(t, int64(600000000000), int64(d))
 	assert.Equal(t, -0.28470407323754404, math.Sin(n))
 }
