@@ -34,7 +34,7 @@ func TestSwitch(t *testing.T) {
 	}
 
 	whatAmI := func(i interface{}) string {
-		result := "unknown"
+		result := ""
 		switch t := i.(type) {
 		case bool:
 			fmt.Println("I'm a boolean")
