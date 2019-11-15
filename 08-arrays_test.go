@@ -18,6 +18,7 @@ func TestArrays(t *testing.T) {
 
 	b := [5]int{1, 2, 3, 4, 5}
 	fmt.Println("dc1:", b)
+	assert.ElementsMatch(t, a, [5]int{1, 2, 3, 4, 5})
 
 	var twoD [2][3]int
 	for i := 0; i < 2; i++ {
