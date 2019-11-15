@@ -15,8 +15,6 @@ func TestMaps(t *testing.T) {
 
 	assert.Equal(t, len(map[string]int{"k1": 7, "k2": 13}), len(m))
 
-	fmt.Println("map:", m)
-
 	v1 := m["k1"]
 	fmt.Println("v1: ", v1)
 	fmt.Println("len:", len(m))
