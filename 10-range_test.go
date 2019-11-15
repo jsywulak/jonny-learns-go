@@ -26,7 +26,6 @@ func TestRanges(t *testing.T) {
 	for k, v := range kvs {
 		assert.Equal(t, kvs[k], v)
 	}
-	fmt.Println(kvs)
 
 	for k := range kvs {
 		fmt.Println("key:", k)

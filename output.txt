@@ -1,8 +1,7 @@
-map[a:apple b:banana]
 key: a
 key: b
-val: banana
 val: apple
+val: banana
 0 103
 1 111
 0 104
@@ -17,4 +16,4 @@ val: apple
 9 108
 10 100
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.099s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.102s
