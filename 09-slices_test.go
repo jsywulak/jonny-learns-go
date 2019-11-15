@@ -27,11 +27,11 @@ func TestSlices(t *testing.T) {
 	assert.ElementsMatch(t, c, [6]string{"a", "b", "c", "d", "e", "f"})
 
 	l := s[2:5]
-	fmt.Println("sl1:", l)
 	assert.ElementsMatch(t, l, [3]string{"c", "d", "e"})
 
 	l = s[:5]
 	fmt.Println("sl2", l)
+	assert.ElementsMatch(t, l, [5]string{"a", "b", "c", "d", "e"})
 
 	l = s[2:]
 	fmt.Println("sl3:", l)
