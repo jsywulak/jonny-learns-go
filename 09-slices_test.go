@@ -15,11 +15,8 @@ func TestSlices(t *testing.T) {
 	s[1] = "b"
 	s[2] = "c"
 
-	fmt.Println("set:", s)
 	assert.ElementsMatch(t, s, [3]string{"a", "b", "c"})
-	fmt.Println("get:", s[2])
 	assert.Equal(t, "c", s[2])
-	fmt.Println("len:", len(s))
 
 	s = append(s, "d")
 	s = append(s, "e", "f")
