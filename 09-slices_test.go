@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -46,7 +45,6 @@ func TestSlices(t *testing.T) {
 			twoD[i][j] = i + j
 		}
 	}
-	fmt.Println("2d: ", twoD)
 	assert.ElementsMatch(t, [][]int{{0}, {1, 2}, {2, 3, 4}}, twoD)
 
 }
