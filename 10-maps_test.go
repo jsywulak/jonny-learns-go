@@ -19,7 +19,7 @@ func TestMaps(t *testing.T) {
 	}
 	fmt.Println(expected)
 
-	assert.Contains(t, expected, m)
+	assert.Equal(t, len(expected), len(m))
 
 	fmt.Println("map:", m)
 
