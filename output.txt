@@ -1,6 +1,6 @@
 index: 1
-b -> banana
 a -> apple
+b -> banana
 map[a:apple b:banana]
 key: a
 key: b
@@ -20,4 +20,4 @@ val: banana
 9 108
 10 100
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.085s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.081s
