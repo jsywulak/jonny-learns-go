@@ -38,6 +38,7 @@ func TestSlices(t *testing.T) {
 
 	t2 := []string{"g", "h", "i"}
 	fmt.Println("dc1:", t2)
+	assert.ElementsMatch(t, t2, [3]string{"g", "h", "i"})
 
 	twoD := make([][]int, 3)
 	for i := 0; i < 3; i++ {
