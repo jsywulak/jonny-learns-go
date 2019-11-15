@@ -11,6 +11,12 @@ func TestMaps(t *testing.T) {
 	m["k1"] = 7
 	m["k2"] = 13
 
+	expected := map[string]int{
+		"k1": 7,
+		"k2": 13,
+	}
+	fmt.Println(expected)
+
 	fmt.Println("map:", m)
 
 	v1 := m["k1"]
