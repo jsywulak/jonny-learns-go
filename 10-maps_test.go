@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMaps(t *testing.T) {
@@ -16,6 +18,8 @@ func TestMaps(t *testing.T) {
 		"k2": 13,
 	}
 	fmt.Println(expected)
+
+	assert.Contains(t, expected, m)
 
 	fmt.Println("map:", m)
 
