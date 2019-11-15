@@ -3,4 +3,4 @@ map: map[k1:7]
 prs: false
 map: map[bar:2 foo:1]
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.108s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.218s
