@@ -1,1 +1,0 @@
-FAIL	_/Users/jonny/projects/jonny-learns-go [setup failed]
