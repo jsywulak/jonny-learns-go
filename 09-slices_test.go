@@ -20,12 +20,12 @@ func TestSlices(t *testing.T) {
 
 	s = append(s, "d")
 	s = append(s, "e", "f")
-	fmt.Println("apd", s)
 	assert.ElementsMatch(t, s, [6]string{"a", "b", "c", "d", "e", "f"})
 
 	c := make([]string, len(s))
 	copy(c, s)
 	fmt.Println("cpy:", c)
+	assert.ElementsMatch(t, c, [6]string{"a", "b", "c", "d", "e", "f"})
 
 	l := s[2:5]
 	fmt.Println("sl1:", l)
