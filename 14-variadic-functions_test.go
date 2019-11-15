@@ -14,11 +14,12 @@ func sum(nums ...int) {
 		total += num
 	}
 	fmt.Println(total)
+	return total
 }
 
 func TestVariadicFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
-	sum(1, 2)
+	assert.Equal(t, 3, sum(1, 2))
 	sum(1, 2, 3)
 	nums := []int{1, 2, 3, 4}
 	sum(nums...)
