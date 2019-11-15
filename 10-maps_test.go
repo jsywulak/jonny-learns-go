@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -21,9 +20,8 @@ func TestMaps(t *testing.T) {
 	assert.Equal(t, 1, len(m))
 
 	_, prs := m["k2"]
-	fmt.Println("prs:", prs)
 	assert.False(t, prs, "no error should be returned")
 
 	n := map[string]int{"foo": 1, "bar": 2}
-	fmt.Println("map:", n)
+	assert.Equal(t, 2, len(n))
 }
