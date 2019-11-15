@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func sum(nums ...int) {
+func sum(nums ...int) int {
 	fmt.Print(nums, " ")
 	total := 0
 	for _, num := range nums {
