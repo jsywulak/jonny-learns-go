@@ -1,28 +1,8 @@
-=== RUN   TestHelloWorld
---- PASS: TestHelloWorld (0.00s)
-=== RUN   TestValues
---- PASS: TestValues (0.00s)
-=== RUN   TestVariables
---- PASS: TestVariables (0.00s)
-=== RUN   TestConstants
---- PASS: TestConstants (0.00s)
-=== RUN   TestFor
---- PASS: TestFor (0.00s)
-=== RUN   TestIfElse
---- PASS: TestIfElse (0.00s)
-=== RUN   TestSwitch
---- PASS: TestSwitch (0.00s)
-=== RUN   TestArrays
---- PASS: TestArrays (0.00s)
-=== RUN   TestSlices
---- PASS: TestSlices (0.00s)
-=== RUN   TestMaps
 map: map[k1:7 k2:13]
 v1:  7
 len: 2
 map: map[k1:7]
 prs: false
 map: map[bar:2 foo:1]
---- PASS: TestMaps (0.00s)
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.104s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.089s
