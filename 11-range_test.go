@@ -33,6 +33,7 @@ func TestRanges(t *testing.T) {
 
 	for _, v := range kvs {
 		fmt.Println("val:", v)
+		assert.Equal(t, v, v)
 	}
 
 	actual := ""
