@@ -31,7 +31,6 @@ func TestRanges(t *testing.T) {
 		assert.NotEmpty(t, kvs[k])
 	}
 
-	actual := []string
 	for _, v := range kvs {
 		fmt.Println("val:", v)
 	}
