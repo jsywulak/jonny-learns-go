@@ -13,7 +13,6 @@ func TestArrays(t *testing.T) {
 	assert.ElementsMatch(t, a, [5]int{0, 0, 0, 0, 0})
 
 	a[4] = 100
-	fmt.Println("get:", a[4])
 	assert.Equal(t, 100, a[4])
 	fmt.Println("len:", len(a))
 
