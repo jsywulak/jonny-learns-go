@@ -17,7 +17,6 @@ func TestArrays(t *testing.T) {
 	assert.Equal(t, 5, len(a))
 
 	b := [5]int{1, 2, 3, 4, 5}
-	fmt.Println("dc1:", b)
 	assert.ElementsMatch(t, b, [5]int{1, 2, 3, 4, 5})
 
 	var twoD [2][3]int
