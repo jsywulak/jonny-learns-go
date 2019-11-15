@@ -5,8 +5,8 @@ b -> banana
 map[a:apple b:banana]
 key: a
 key: b
-val: apple
 val: banana
+val: apple
 0 103
 1 111
 0 104
@@ -21,4 +21,4 @@ val: banana
 9 108
 10 100
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.112s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.095s
