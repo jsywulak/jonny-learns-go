@@ -1,4 +1,4 @@
 prs: false
 map: map[bar:2 foo:1]
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.125s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.097s

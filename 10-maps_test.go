@@ -22,6 +22,7 @@ func TestMaps(t *testing.T) {
 
 	_, prs := m["k2"]
 	fmt.Println("prs:", prs)
+	assert.False(t, prs, "no error should be returned")
 
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
