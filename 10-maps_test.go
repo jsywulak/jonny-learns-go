@@ -17,7 +17,6 @@ func TestMaps(t *testing.T) {
 		"k1": 7,
 		"k2": 13,
 	}
-	fmt.Println(expected)
 
 	assert.Equal(t, len(expected), len(m))
 

@@ -17,7 +17,6 @@
 === RUN   TestSlices
 --- PASS: TestSlices (0.00s)
 === RUN   TestMaps
-map[k1:7 k2:13]
 map: map[k1:7 k2:13]
 v1:  7
 len: 2
@@ -26,4 +25,4 @@ prs: false
 map: map[bar:2 foo:1]
 --- PASS: TestMaps (0.00s)
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.088s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.101s
