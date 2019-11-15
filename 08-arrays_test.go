@@ -23,6 +23,5 @@ func TestArrays(t *testing.T) {
 			twoD[i][j] = i + j
 		}
 	}
-	var expected = [2][3]int{{0, 1, 2}, {1, 2, 3}}
-	assert.ElementsMatch(t, expected, twoD)
+	assert.ElementsMatch(t, [2][3]int{{0, 1, 2}, {1, 2, 3}}, twoD)
 }
