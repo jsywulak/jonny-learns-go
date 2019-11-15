@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -32,7 +31,6 @@ func TestRanges(t *testing.T) {
 	}
 
 	for _, v := range kvs {
-		fmt.Println("val:", v)
 		assert.Equal(t, v, v)
 	}
 
