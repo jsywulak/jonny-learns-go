@@ -15,7 +15,5 @@ func plusPlus(a, b, c int) int {
 }
 func TestFunctions(t *testing.T) {
 	assert.Equal(t, 3, plus(1, 2))
-
 	assert.Equal(t, 6, plusPlus(1, 2, 3))
-
 }
