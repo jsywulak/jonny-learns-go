@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -9,7 +8,6 @@ import (
 
 func TestArrays(t *testing.T) {
 	var a [5]int
-	fmt.Println("emp:", a)
 	assert.ElementsMatch(t, a, [5]int{0, 0, 0, 0, 0})
 
 	a[4] = 100
