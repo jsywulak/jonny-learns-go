@@ -36,6 +36,7 @@ func TestRanges(t *testing.T) {
 	}
 
 	for i, c := range "go" {
+
 		fmt.Println(i, c)
 	}
 	for i, c := range "hello world" {
