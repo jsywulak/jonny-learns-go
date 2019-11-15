@@ -18,7 +18,6 @@ func TestRanges(t *testing.T) {
 
 	for i, num := range nums {
 		if num == 3 {
-			fmt.Println("index:", i)
 			assert.Equal(t, 1, i)
 
 		}
