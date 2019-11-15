@@ -1,2 +1,24 @@
+sum: 9
+index: 1
+a -> apple
+b -> banana
+map[a:apple b:banana]
+key: a
+key: b
+val: apple
+val: banana
+0 103
+1 111
+0 104
+1 101
+2 108
+3 108
+4 111
+5 32
+6 119
+7 111
+8 114
+9 108
+10 100
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.126s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.128s

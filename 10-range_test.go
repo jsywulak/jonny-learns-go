@@ -1,8 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
 
-func TestRanges() {
+	"github.com/stretchr/testify/assert"
+)
+
+func TestRanges(t *testing.T) {
+	assert.True(t, true)
 	nums := []int{2, 3, 4}
 	sum := 0
 	for _, num := range nums {
