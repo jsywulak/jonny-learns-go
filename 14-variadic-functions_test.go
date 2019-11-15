@@ -22,5 +22,6 @@ func TestVariadicFunctions(t *testing.T) {
 	assert.Equal(t, 3, sum(1, 2))
 	assert.Equal(t, 6, sum(1, 2, 3))
 	nums := []int{1, 2, 3, 4}
-	sum(nums...)
+	assert.Equal(t, 10, sum(nums...))
+
 }
