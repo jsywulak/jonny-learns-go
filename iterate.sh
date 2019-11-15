@@ -9,7 +9,7 @@ then
     then
         rm -f last_failure.txt
     else
-        cat last_failure.txt
+        cat last_failure.txt 2> /dev/null
     fi
     # if commit succeeeds, delete output
     git push -q &
