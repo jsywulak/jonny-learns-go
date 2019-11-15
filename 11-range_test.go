@@ -36,16 +36,14 @@ func TestRanges(t *testing.T) {
 	}
 
 	actual := ""
-	for i, c := range "go" {
+	for _, c := range "go" {
 
-		fmt.Println(i, c)
 		actual += string(c)
 	}
 	assert.Equal(t, "go", actual)
 
 	actual = ""
-	for i, c := range "hello world" {
-		fmt.Println(i, c)
+	for _, c := range "hello world" {
 		actual += string(c)
 	}
 	assert.Equal(t, "hello world", actual)
