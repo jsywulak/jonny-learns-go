@@ -14,7 +14,6 @@ then
     # if commit succeeeds, delete output
     git push -q &
 else
-    cat output.txt
     mv output.txt last_failure.txt
     echo "tests failed, reverting"
     git checkout .
