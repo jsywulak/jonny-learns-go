@@ -15,7 +15,6 @@ func TestArrays(t *testing.T) {
 	a[4] = 100
 	assert.Equal(t, 100, a[4])
 	assert.Equal(t, 5, len(a))
-	// fmt.Println("len:", len(a))
 
 	b := [5]int{1, 2, 3, 4, 5}
 	fmt.Println("dc1:", b)
