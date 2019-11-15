@@ -31,13 +31,13 @@ func TestRanges(t *testing.T) {
 		assert.NotEmpty(t, kvs[k])
 	}
 
+	actual := []string
 	for _, v := range kvs {
 		fmt.Println("val:", v)
 	}
 
 	actual := ""
 	for _, c := range "go" {
-
 		actual += string(c)
 	}
 	assert.Equal(t, "go", actual)
