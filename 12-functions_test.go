@@ -19,8 +19,7 @@ func TestFunctions(t *testing.T) {
 	res := plus(1, 2)
 	assert.Equal(t, 3, res)
 
-	res = plusPlus(1, 2, 3)
-	fmt.Println("1+2+3=", res)
-	assert.Equal(t, 6, res)
+	fmt.Println("1+2+3=", plusPlus(1, 2, 3))
+	assert.Equal(t, 6, plusPlus(1, 2, 3))
 
 }
