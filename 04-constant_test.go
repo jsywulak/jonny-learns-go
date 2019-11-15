@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"testing"
 
@@ -11,8 +10,6 @@ import (
 const s string = "constant"
 
 func TestConstants(t *testing.T) {
-	fmt.Println(s)
-
 	assert.Equal(t, "constant", s)
 
 	const n = 500000000
