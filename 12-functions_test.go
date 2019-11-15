@@ -21,4 +21,6 @@ func TestFunctions(t *testing.T) {
 
 	res = plusPlus(1, 2, 3)
 	fmt.Println("1+2+3=", res)
+	assert.Equal(t, 6, res)
+
 }
