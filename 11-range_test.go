@@ -35,9 +35,11 @@ func TestRanges(t *testing.T) {
 		fmt.Println("val:", v)
 	}
 
+	actual := ""
 	for i, c := range "go" {
 
 		fmt.Println(i, c)
+		actual += c
 	}
 	for i, c := range "hello world" {
 		fmt.Println(i, c)
