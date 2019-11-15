@@ -1,2 +1,2 @@
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.096s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.088s
