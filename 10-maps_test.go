@@ -13,9 +13,7 @@ func TestMaps(t *testing.T) {
 	m["k1"] = 7
 	m["k2"] = 13
 
-	expected := map[string]int{"k1": 7, "k2": 13}
-
-	assert.Equal(t, len(expected), len(m))
+	assert.Equal(t, len(map[string]int{"k1": 7, "k2": 13}), len(m))
 
 	fmt.Println("map:", m)
 
