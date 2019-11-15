@@ -1,5 +1,5 @@
-b -> banana
 a -> apple
+b -> banana
 map[a:apple b:banana]
 key: a
 key: b
