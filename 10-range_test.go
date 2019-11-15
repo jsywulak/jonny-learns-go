@@ -14,7 +14,6 @@ func TestRanges(t *testing.T) {
 	for _, num := range nums {
 		sum += num
 	}
-	fmt.Println("sum:", sum)
 	assert.Equal(t, 9, sum)
 
 	for i, num := range nums {

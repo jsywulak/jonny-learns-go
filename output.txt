@@ -1,4 +1,3 @@
-sum: 9
 index: 1
 a -> apple
 b -> banana
@@ -21,4 +20,4 @@ val: banana
 9 108
 10 100
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.125s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.112s
