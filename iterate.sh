@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if go test -v | tee > output.txt
+if (go test -v | tee > output.txt)
 then
     echo "tests passed, committing"
     git add .
