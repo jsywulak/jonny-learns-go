@@ -24,7 +24,6 @@ func TestSlices(t *testing.T) {
 
 	c := make([]string, len(s))
 	copy(c, s)
-	fmt.Println("cpy:", c)
 	assert.ElementsMatch(t, c, [6]string{"a", "b", "c", "d", "e", "f"})
 
 	l := s[2:5]
