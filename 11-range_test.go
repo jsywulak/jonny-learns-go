@@ -39,7 +39,7 @@ func TestRanges(t *testing.T) {
 	for i, c := range "go" {
 
 		fmt.Println(i, c)
-		actual += c
+		actual = actual + string(c)
 	}
 	for i, c := range "hello world" {
 		fmt.Println(i, c)
