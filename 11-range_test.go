@@ -41,6 +41,7 @@ func TestRanges(t *testing.T) {
 		fmt.Println(i, c)
 		actual += string(c)
 	}
+	assert.Equal(t, "go", actual)
 	for i, c := range "hello world" {
 		fmt.Println(i, c)
 	}
