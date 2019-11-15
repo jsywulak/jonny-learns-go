@@ -47,6 +47,6 @@ func TestSlices(t *testing.T) {
 		}
 	}
 	fmt.Println("2d: ", twoD)
-	// assert.ElementsMatch(t, [2][3]int{{0, 1, 2}, {1, 2, 3}}, twoD)
+	assert.ElementsMatch(t, [][]int{{0}, {1, 2}, {2, 3, 4}}, twoD)
 
 }
