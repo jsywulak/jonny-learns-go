@@ -19,7 +19,6 @@ func TestRanges(t *testing.T) {
 	for i, num := range nums {
 		if num == 3 {
 			assert.Equal(t, 1, i)
-
 		}
 	}
 
