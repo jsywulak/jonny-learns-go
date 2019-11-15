@@ -25,6 +25,7 @@ func TestRanges(t *testing.T) {
 	kvs := map[string]string{"a": "apple", "b": "banana"}
 	for k, v := range kvs {
 		fmt.Printf("%s -> %s\n", k, v)
+		assert.Equal(t, kvs[k], v)
 	}
 	fmt.Println(kvs)
 
