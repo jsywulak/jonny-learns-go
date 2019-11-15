@@ -9,7 +9,6 @@ import (
 
 func TestSlices(t *testing.T) {
 	s := make([]string, 3)
-	fmt.Println("emp:", s)
 	assert.ElementsMatch(t, s, [3]string{"", "", ""})
 
 	s[0] = "a"
