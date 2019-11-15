@@ -26,6 +26,6 @@ func TestArrays(t *testing.T) {
 		}
 	}
 	fmt.Println("2d: ", twoD)
-	var expected [2][3]int{{1,2,3},{1,2,3}}
+	var expected = [2][3]int{{1, 2, 3}, {1, 2, 3}}
 	fmt.Print(expected)
 }
