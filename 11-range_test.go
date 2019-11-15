@@ -28,7 +28,6 @@ func TestRanges(t *testing.T) {
 	}
 
 	for k := range kvs {
-		fmt.Println("key:", k)
 		assert.NotEmpty(t, kvs[k])
 	}
 
