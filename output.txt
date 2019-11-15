@@ -25,4 +25,4 @@ prs: false
 map: map[bar:2 foo:1]
 --- PASS: TestMaps (0.00s)
 PASS
-ok  	_/Users/jonny/projects/jonny-learns-go	0.088s
+ok  	_/Users/jonny/projects/jonny-learns-go	0.080s

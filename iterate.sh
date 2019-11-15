@@ -3,6 +3,7 @@
 if go test -v > output.txt
 then
     echo "tests passed, committing"
+    cat output.txt
     git add .
     if git commit -m "iterate `date +%Y%m%d%H%M%S`"
     then
@@ -13,7 +14,7 @@ then
     # if commit succeeeds, delete output
     git push -q &
 else
-    # save output
+    cat output.txt
     mv output.txt last_failure.txt
     echo "tests failed, reverting"
     git checkout .
