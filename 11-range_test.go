@@ -32,7 +32,6 @@ func TestRanges(t *testing.T) {
 
 	for _, v := range kvs {
 		// ¯\_(ツ)_/¯
-
 		assert.Equal(t, v, v)
 	}
 
