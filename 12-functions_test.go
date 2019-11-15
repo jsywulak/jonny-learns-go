@@ -17,7 +17,6 @@ func plusPlus(a, b, c int) int {
 func TestFunctions(t *testing.T) {
 	assert.True(t, true)
 	res := plus(1, 2)
-	fmt.Println("1+2=", res)
 	assert.Equal(t, 3, res)
 
 	res = plusPlus(1, 2, 3)
