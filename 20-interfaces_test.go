@@ -49,5 +49,7 @@ func TestInterfaces(t *testing.T) {
 	c := circle{radius: 5}
 
 	measure(r)
+	assert.Equal(t, float64(12), r.area())
+
 	measure(c)
 }
