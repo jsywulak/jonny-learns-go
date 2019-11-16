@@ -21,7 +21,8 @@ func NewPerson(name string) *person {
 func TestStructs(t *testing.T) {
 
 	assert.Equal(t, 1, 1)
-	fmt.Println(person{"Bob", 20})
+	bob := person{"Bob", 20}
+	fmt.Println(bob)
 	fmt.Println(person{name: "Alice", age: 30})
 	fmt.Println(person{name: "Fred"})
 	fmt.Println(&person{name: "Ann", age: 40})
