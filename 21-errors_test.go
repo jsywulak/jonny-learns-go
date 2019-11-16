@@ -48,7 +48,6 @@ func TestErrors(t *testing.T) {
 	if assert.Error(t, e2) {
 		// assert.Equal(t, expectedError, argError)
 		fmt.Printf("%T\n", e2)
-
 	}
 	fmt.Println(r2, e2)
 	for _, i := range []int{7, 42} {
