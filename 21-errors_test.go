@@ -42,7 +42,10 @@ func TestErrors(t *testing.T) {
 	}
 	r1, e1 := f1(7)
 	fmt.Println(r1, e1)
-	assert.Equal(t, 10, r1)
+
+	if assert.NoError(t, e1) {
+		assert.Equal(t, 10, r1)
+	}
 	// r2, e2 := f1(42)
 	// fmt.Println(r2, e2)
 	for _, i := range []int{7, 42} {
