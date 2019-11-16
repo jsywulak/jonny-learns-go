@@ -37,7 +37,8 @@ func TestStructs(t *testing.T) {
 	assert.Equal(t, jon.age, 42)
 
 	s := person{name: "Sean", age: 50}
-	fmt.Println(s.name)
+	assert.Equal(t, s.name, "Sean")
+	assert.Equal(t, s.age, 50)
 
 	sp := &s
 	fmt.Println(sp.age)
