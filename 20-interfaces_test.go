@@ -53,4 +53,6 @@ func TestInterfaces(t *testing.T) {
 	assert.Equal(t, float64(14), r.perim())
 
 	measure(c)
+	assert.Equal(t, float64(78.53981633974483), c.area())
+	assert.Equal(t, float64(31.41592653589793), c.perim())
 }
