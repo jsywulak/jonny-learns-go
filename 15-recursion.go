@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 func fact(n int) int {
 	if n == 0 {
@@ -9,6 +12,6 @@ func fact(n int) int {
 	return n * fact(n-1)
 }
 
-func TestRecursion() {
+func TestRecursion(t *testing.T) {
 	fmt.Println(fact(7))
 }
