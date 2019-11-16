@@ -24,7 +24,6 @@ func TestMethods(t *testing.T) {
 
 	assert.Equal(t, 50, r.area())
 	assert.Equal(t, 30, r.perim())
-	fmt.Println("perim:", r.perim())
 
 	rp := &r
 
