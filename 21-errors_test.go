@@ -41,8 +41,6 @@ func TestErrors(t *testing.T) {
 		}
 	}
 	r1, e1 := f1(7)
-	fmt.Println(r1, e1)
-
 	if assert.NoError(t, e1) {
 		assert.Equal(t, 10, r1)
 	}
