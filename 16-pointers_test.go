@@ -26,4 +26,5 @@ func TestPointers(t *testing.T) {
 	assert.Equal(t, 0, i)
 
 	fmt.Println("pointer", &i)
+	assert.NotEqual(t, 0, &i)
 }
