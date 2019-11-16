@@ -22,8 +22,8 @@ func (r rect) perim() int {
 func TestMethods(t *testing.T) {
 	r := rect{width: 10, height: 5}
 
-	fmt.Println("area:", r.area())
 	assert.Equal(t, 50, r.area())
+	assert.Equal(t, 30, r.perim())
 	fmt.Println("perim:", r.perim())
 
 	rp := &r
