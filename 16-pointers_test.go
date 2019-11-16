@@ -27,6 +27,6 @@ func TestPointers(t *testing.T) {
 
 	fmt.Println("pointer", &i)
 	fmt.Printf("%T", &i)
-	assert.IsType(t, int, &i)
+	assert.IsType(t, &i, &i)
 	assert.NotEqual(t, 1, &i)
 }
