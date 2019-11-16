@@ -26,5 +26,4 @@ func TestPointers(t *testing.T) {
 
 	myInt := 1
 	assert.IsType(t, &myInt, &i)
-	assert.NotEqual(t, 1, &i)
 }
