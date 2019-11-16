@@ -17,14 +17,13 @@ func zeroptr(iptr *int) {
 
 func TestPointers(t *testing.T) {
 	i := 1
-	fmt.Println("initial:", i)
 	assert.Equal(t, 1, i)
 
 	zeroval(i)
-	fmt.Println("zeroval", i)
+	assert.Equal(t, 1, i)
 
 	zeroptr(&i)
-	fmt.Println("zeroptr:", i)
+	assert.Equal(t, 0, i)
 
 	fmt.Println("pointer", &i)
 }
