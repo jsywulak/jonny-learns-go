@@ -18,7 +18,7 @@ func intSeq() func() int {
 func TestClosures(t *testing.T) {
 	assert.Equal(t, 4, 4)
 	nextInt := intSeq()
-	fmt.Println(nextInt())
+	assert.Equal(t, 1, nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
