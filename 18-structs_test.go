@@ -33,6 +33,8 @@ func TestStructs(t *testing.T) {
 	assert.Equal(t, fred.name, "Fred")
 	assert.Equal(t, fred.age, 0)
 	ann := &person{name: "Ann", age: 40}
+	assert.Equal(t, ann.name, "Ann")
+	assert.Equal(t, ann.age, 40)
 	fmt.Println(ann)
 	jon := NewPerson("Jon")
 	fmt.Println(jon)
