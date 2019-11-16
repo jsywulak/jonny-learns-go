@@ -41,8 +41,9 @@ func TestStructs(t *testing.T) {
 	assert.Equal(t, s.age, 50)
 
 	sp := &s
-	fmt.Println(sp.age)
+	assert.Equal(t, sp.age, 50)
 
 	sp.age = 51
+	assert.Equal(t, s.age, 51)
 	fmt.Println(sp.age)
 }
