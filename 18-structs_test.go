@@ -20,9 +20,10 @@ func NewPerson(name string) *person {
 
 func TestStructs(t *testing.T) {
 
-	assert.Equal(t, 1, 1)
 	bob := person{"Bob", 20}
 	fmt.Println(bob)
+	assert.Equal(t, bob.name, "Bob")
+	assert.Equal(t, bob.age, "20")
 	alice := person{name: "Alice", age: 30}
 	fmt.Println(alice)
 	fred := person{name: "Fred"}
