@@ -25,7 +25,6 @@ func (e *argError) Error() string {
 }
 
 func f2(arg int) (int, error) {
-	fmt.Println("this is fine: ", arg)
 	if arg == 42 {
 		return -1, &argError{arg, "can't work with it"}
 	}
