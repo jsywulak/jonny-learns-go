@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -25,8 +24,6 @@ func TestPointers(t *testing.T) {
 	zeroptr(&i)
 	assert.Equal(t, 0, i)
 
-	fmt.Println("pointer", &i)
-	fmt.Printf("%T", &i)
 	myInt := 1
 	assert.IsType(t, &myInt, &i)
 	assert.NotEqual(t, 1, &i)
