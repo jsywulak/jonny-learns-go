@@ -20,10 +20,10 @@ func (r rect) perim() int {
 }
 
 func TestMethods(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	r := rect{width: 10, height: 5}
 
 	fmt.Println("area:", r.area())
+	assert.Equal(t, 50, r.area())
 	fmt.Println("perim:", r.perim())
 
 	rp := &r
