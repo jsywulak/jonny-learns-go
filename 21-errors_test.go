@@ -40,6 +40,7 @@ func TestErrors(t *testing.T) {
 			fmt.Println("f1 worked", r)
 		}
 	}
+	r1, e1 := f1(7)
 	for _, i := range []int{7, 42} {
 		if r, e := f2(i); e != nil {
 			fmt.Println("f2 failed", e)
