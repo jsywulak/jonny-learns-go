@@ -45,9 +45,11 @@ func TestErrors(t *testing.T) {
 		assert.Equal(t, 10, r1)
 	}
 	r2, e2 := f1(42)
-	// if assert.Error(t, e2) {
-	// 	assert.Equal(t, expectedError, argError)
-	// }
+	if assert.Error(t, e2) {
+		// assert.Equal(t, expectedError, argError)
+		fmt.Printf("%T\n", e2)
+
+	}
 	fmt.Println(r2, e2)
 	for _, i := range []int{7, 42} {
 		if r, e := f2(i); e != nil {
