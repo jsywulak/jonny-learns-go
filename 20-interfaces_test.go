@@ -50,6 +50,7 @@ func TestInterfaces(t *testing.T) {
 
 	measure(r)
 	assert.Equal(t, float64(12), r.area())
+	assert.Equal(t, float64(14), r.perim())
 
 	measure(c)
 }
