@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -45,5 +44,4 @@ func TestStructs(t *testing.T) {
 
 	sp.age = 51
 	assert.Equal(t, s.age, 51)
-	fmt.Println(sp.age)
 }
