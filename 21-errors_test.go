@@ -55,7 +55,7 @@ func TestErrors(t *testing.T) {
 		// assert.Equal(t, &errors.errorString{-1, "how does this work"}, e2)
 		// fmt.Printf("e2: %T\n", e2.(*argError))
 		fmt.Printf("e2: %T\n", e2)
-		fmt.Printf("e2: %T\n", given)
+		fmt.Printf("gi: %T\n", given)
 		fmt.Printf("ex: %T\n", expected)
 	}
 
