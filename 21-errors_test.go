@@ -49,6 +49,7 @@ func TestErrors(t *testing.T) {
 		assert.Equal(t, 10, r1p)
 	}
 	r1f, e1f := f1(42)
+	assert.Equal(t, -1, r1f)
 	if assert.Error(t, e1f) {
 		expected := errors.New("can't work with 42")
 		assert.Equal(t, expected, e1f)
