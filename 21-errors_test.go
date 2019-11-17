@@ -71,7 +71,7 @@ func TestErrors(t *testing.T) {
 	assert.Equal(t, -1, r2f)
 	if assert.Error(t, e2f) {
 		expected := &argError{42, "can't work with it"}
-		// assert.Equal(t, expected, e2f)
+		assert.Equal(t, expected, e2f)
 		fmt.Println(r2f, e2f, expected)
 	}
 
