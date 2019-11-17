@@ -37,13 +37,13 @@ func givemeanerror() error {
 
 func TestErrors(t *testing.T) {
 	assert.Equal(t, 1, 1)
-	for _, i := range []int{7, 42} {
-		if r, e := f1(i); e != nil {
-			fmt.Println("f1 failed:", e)
-		} else {
-			fmt.Println("f1 worked", r)
-		}
-	}
+	// for _, i := range []int{7, 42} {
+	// 	if r, e := f1(i); e != nil {
+	// 		fmt.Println("f1 failed:", e)
+	// 	} else {
+	// 		fmt.Println("f1 worked", r)
+	// 	}
+	// }
 	r1p, e1p := f1(7)
 	if assert.NoError(t, e1p) {
 		assert.Equal(t, 10, r1p)
