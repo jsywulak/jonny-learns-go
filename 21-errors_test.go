@@ -70,9 +70,9 @@ func TestErrors(t *testing.T) {
 	r2f, e2f := f2(42)
 	assert.Equal(t, -1, r2f)
 	if assert.Error(t, e2f) {
-		// expected := errors.New("can't work with 42")
+		expected := errors.New("can't work with 42")
 		// assert.Equal(t, expected, e2f)
-		fmt.Println(r2f, e2f)
+		fmt.Println(r2f, e2f, expected)
 	}
 
 	_, e := f2(42)
