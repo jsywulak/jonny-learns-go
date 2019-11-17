@@ -51,12 +51,7 @@ func TestErrors(t *testing.T) {
 	r2, e2 := f2(42)
 	if assert.Error(t, e2) {
 		expected := &argError{42, "can't work with it"}
-		given := givemeanerror()
 		assert.Equal(t, expected, e2)
-		fmt.Printf("e2: %T\n", e2.(*argError))
-		fmt.Printf("e2: %T\n", e2)
-		fmt.Printf("gi: %T\n", given)
-		fmt.Printf("ex: %T\n", expected)
 	}
 
 	fmt.Println(r2, e2)
