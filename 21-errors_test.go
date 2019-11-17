@@ -67,12 +67,13 @@ func TestErrors(t *testing.T) {
 	if assert.NoError(t, e2p) {
 		assert.Equal(t, 10, r2p)
 	}
-	// r2f, e2f := f2(42)
-	// assert.Equal(t, -1, r1f)
-	// if assert.Error(t, e1f) {
-	// 	expected := errors.New("can't work with 42")
-	// 	assert.Equal(t, expected, e1f)
-	// }
+	r2f, e2f := f2(42)
+	assert.Equal(t, -1, r2f)
+	if assert.Error(t, e2f) {
+		// expected := errors.New("can't work with 42")
+		// assert.Equal(t, expected, e2f)
+		fmt.Println(r2f, e2f)
+	}
 
 	_, e := f2(42)
 	if ae, ok := e.(*argError); ok {
