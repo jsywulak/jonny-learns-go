@@ -31,6 +31,10 @@ func f2(arg int) (int, error) {
 	return arg + 3, nil
 }
 
+func givemeanerror() error {
+	return &argError{-1, "can't work with it"}
+}
+
 func TestErrors(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	for _, i := range []int{7, 42} {
