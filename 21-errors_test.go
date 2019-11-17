@@ -52,7 +52,7 @@ func TestErrors(t *testing.T) {
 	if assert.Error(t, e2) {
 		expected := &argError{-1, "can't work with it"}
 		given := givemeanerror()
-		// assert.Equal(t, &errors.errorString{-1, "how does this work"}, e2)
+		// assert.Equal(t, expected, e2)
 		fmt.Printf("e2: %T\n", e2.(*argError))
 		fmt.Printf("e2: %T\n", e2)
 		fmt.Printf("gi: %T\n", given)
