@@ -48,7 +48,7 @@ func TestErrors(t *testing.T) {
 	if assert.NoError(t, e1) {
 		assert.Equal(t, 10, r1)
 	}
-	r2, e2 := f1(42)
+	r2, e2 := f2(42)
 	if assert.Error(t, e2) {
 		expected := &argError{-1, "can't work with it"}
 		given := givemeanerror()
