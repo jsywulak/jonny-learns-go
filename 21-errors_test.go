@@ -65,6 +65,7 @@ func TestErrors(t *testing.T) {
 	_, e := f2(42)
 	if ae, ok := e.(*argError); ok {
 		fmt.Println(ae.arg)
+		assert.Equal(t, 42, ae.arg)
 		fmt.Println(ae.prob)
 	}
 }
