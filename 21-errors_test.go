@@ -55,13 +55,13 @@ func TestErrors(t *testing.T) {
 		assert.Equal(t, expected, e1f)
 	}
 
-	for _, i := range []int{7, 42} {
-		if r, e := f2(i); e != nil {
-			fmt.Println("f2 failed", e)
-		} else {
-			fmt.Println("f2 worked:", r)
-		}
-	}
+	// for _, i := range []int{7, 42} {
+	// 	if r, e := f2(i); e != nil {
+	// 		fmt.Println("f2 failed", e)
+	// 	} else {
+	// 		fmt.Println("f2 worked:", r)
+	// 	}
+	// }
 
 	r2p, e2p := f2(7)
 	if assert.NoError(t, e2p) {
