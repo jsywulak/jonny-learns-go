@@ -44,9 +44,9 @@ func TestErrors(t *testing.T) {
 			fmt.Println("f1 worked", r)
 		}
 	}
-	r1, e1 := f1(7)
+	r1p, e1 := f1(7)
 	if assert.NoError(t, e1) {
-		assert.Equal(t, 10, r1)
+		assert.Equal(t, 10, r1p)
 	}
 	r2, e2 := f1(42)
 	if assert.Error(t, e2) {
