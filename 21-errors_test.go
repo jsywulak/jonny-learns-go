@@ -51,6 +51,7 @@ func TestErrors(t *testing.T) {
 		fmt.Printf("%T\n", e2)
 		fmt.Printf("%T\n", expected)
 	}
+
 	fmt.Println(r2, e2)
 	for _, i := range []int{7, 42} {
 		if r, e := f2(i); e != nil {
