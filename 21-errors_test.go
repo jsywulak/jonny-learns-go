@@ -46,7 +46,7 @@ func TestErrors(t *testing.T) {
 	}
 	r2, e2 := f1(42)
 	if assert.Error(t, e2) {
-		// assert.Equal(t, &argError{-1, "how does this work"}, e2)
+		// assert.Equal(t, &errors.errorString{-1, "how does this work"}, e2)
 		fmt.Printf("%T\n", e2)
 	}
 	fmt.Println(r2, e2)
