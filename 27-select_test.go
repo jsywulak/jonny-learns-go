@@ -29,6 +29,7 @@ func TestSelect(t *testing.T) {
 			assert.Equal(t, "one", msg1)
 		case msg2 := <-c2:
 			fmt.Println("received", msg2)
+			assert.Equal(t, "two", msg2)
 		}
 	}
 }
