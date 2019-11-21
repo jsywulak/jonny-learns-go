@@ -20,7 +20,7 @@ func TestTimeouts(t *testing.T) {
 	case res := <-c1:
 		assert.True(t, false, "should not have gotten here")
 		fmt.Println(res)
-	case <-time.After(1 * time.Second):
+	case <-time.After(time.Second / 100):
 		fmt.Println("timeout 1")
 		assert.True(t, true, "time out occured")
 	}
