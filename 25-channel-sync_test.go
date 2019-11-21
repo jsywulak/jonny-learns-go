@@ -10,13 +10,12 @@ import (
 
 func TestChannelSync(t *testing.T) {
 	assert.Equal(t, 1, 1)
-	dummymain()
-}
-
-func dummymain() {
 	done := make(chan bool, 1)
 	go worker(done)
 	<-done
+}
+
+func dummymain() {
 }
 
 func worker(done chan bool) {
