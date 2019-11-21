@@ -15,9 +15,6 @@ func TestChannelSync(t *testing.T) {
 	<-done
 }
 
-func dummymain() {
-}
-
 func worker(done chan bool) {
 	fmt.Print("working...")
 	time.Sleep(time.Second)
