@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"testing"
-	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -16,9 +14,5 @@ func TestChannelSync(t *testing.T) {
 }
 
 func worker(done chan bool) {
-	fmt.Print("working...")
-	time.Sleep(time.Second)
-	fmt.Println("done")
-
 	done <- true
 }
