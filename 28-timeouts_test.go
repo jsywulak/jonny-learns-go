@@ -9,8 +9,8 @@ import (
 )
 
 func TestTimeouts(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	c1 := make(chan string, 1)
+
 	go func() {
 		time.Sleep(2 * time.Second)
 		c1 <- "result 1"
@@ -26,6 +26,7 @@ func TestTimeouts(t *testing.T) {
 	}
 
 	c2 := make(chan string, 1)
+
 	go func() {
 		c2 <- "result 2"
 	}()
