@@ -13,3 +13,8 @@ func TestChannelDirections(t *testing.T) {
 func pings(pings chan<- string, msg string) {
 	pings <- msg
 }
+
+func pong(pings <-chan string, pongs chan<- string) {
+	msg := <-pings
+	pongs <- msg
+}
