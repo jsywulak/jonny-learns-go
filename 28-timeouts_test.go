@@ -29,4 +29,8 @@ func TestTimeouts(t *testing.T) {
 		c2 <- "result 2"
 	}()
 
+	select {
+	case res := <-c2:
+		fmt.Println(res)
+	}
 }
