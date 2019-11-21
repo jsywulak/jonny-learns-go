@@ -8,4 +8,9 @@ import (
 
 func TestChannelSync(t *testing.T) {
 	assert.Equal(t, 1, 1)
+	dummymain()
+}
+
+func dummymain() {
+
 }
