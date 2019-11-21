@@ -21,4 +21,5 @@ func TestSelect(t *testing.T) {
 		time.Sleep(2 * time.Second)
 		c2 <- "two"
 	}()
+
 }
