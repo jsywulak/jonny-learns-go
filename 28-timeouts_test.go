@@ -34,7 +34,6 @@ func TestTimeouts(t *testing.T) {
 	select {
 	case res := <-c2:
 		assert.Equal(t, "result 2", res)
-		// fmt.Println(res)
 	case <-time.After(3 * time.Second):
 		fmt.Println("timeout 2")
 	}
