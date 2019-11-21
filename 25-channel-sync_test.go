@@ -7,7 +7,6 @@ import (
 )
 
 func TestChannelSync(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	done := make(chan bool, 1)
 	go worker(done)
 	assert.True(t, <-done)
