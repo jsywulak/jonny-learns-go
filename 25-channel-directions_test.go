@@ -8,9 +8,13 @@ import (
 
 func TestChannelDirections(t *testing.T) {
 	assert.Equal(t, 1, 1)
+	pings := make(chan string, 1)
+	pongs := make(chan string, 1)
+	ping(pings, "passed message")
+	pong(pings, pongs)
 }
 
-func pings(pings chan<- string, msg string) {
+func ping(pings chan<- string, msg string) {
 	pings <- msg
 }
 
