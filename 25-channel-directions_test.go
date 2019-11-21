@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,6 +13,7 @@ func TestChannelDirections(t *testing.T) {
 	pongs := make(chan string, 1)
 	ping(pings, "passed message")
 	pong(pings, pongs)
+	fmt.Println(<-pongs)
 }
 
 func ping(pings chan<- string, msg string) {
