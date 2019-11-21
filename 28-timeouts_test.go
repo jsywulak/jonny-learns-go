@@ -22,6 +22,7 @@ func TestTimeouts(t *testing.T) {
 		fmt.Println(res)
 	case <-time.After(1 * time.Second):
 		fmt.Println("timeout 1")
+		assert.True(t, true, "time out occured")
 	}
 
 	c2 := make(chan string, 1)
