@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sync"
 	"testing"
 	"time"
@@ -25,9 +24,7 @@ func TestRoutines(t *testing.T) {
 	go f("goroutine")
 	f("direct")
 
-	go func(msg string) {
-		fmt.Println(msg)
-	}("going")
+	go func(msg string) {}("going")
 	// just to make sure everything finished up
 	time.Sleep(time.Second / 1000)
 	assert.True(t, dones["goroutine"])

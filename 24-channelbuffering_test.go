@@ -1,8 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestChannelBuffering(t *testing.T) {
@@ -10,6 +11,6 @@ func TestChannelBuffering(t *testing.T) {
 	messages <- "buffered"
 	messages <- "channel"
 
-	fmt.Println(<-messages)
-	fmt.Println(<-messages)
+	assert.Equal(t, "buffered", <-messages)
+	assert.Equal(t, "channel", <-messages)
 }
