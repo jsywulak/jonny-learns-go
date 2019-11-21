@@ -22,4 +22,7 @@ func TestSelect(t *testing.T) {
 		c2 <- "two"
 	}()
 
+	for i := 0; i < 2; i++ {
+
+	}
 }
