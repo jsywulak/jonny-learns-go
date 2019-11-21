@@ -32,7 +32,7 @@ func TestTimeouts(t *testing.T) {
 	select {
 	case res := <-c2:
 		fmt.Println(res)
-	case res := <-time.After(3 * time.Second):
-		fmt.println("timeout 2")
+	case <-time.After(3 * time.Second):
+		fmt.Println("timeout 2")
 	}
 }
