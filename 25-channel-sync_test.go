@@ -20,7 +20,7 @@ func dummymain() {
 }
 
 func worker(done chan bool) {
-	fmt.Print("working")
+	fmt.Print("working...")
 	time.Sleep(time.Second)
 	fmt.Println("done")
 
