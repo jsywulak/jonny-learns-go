@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -15,4 +16,8 @@ func TestTimeouts(t *testing.T) {
 		c1 <- "result 1"
 	}()
 
+	select {
+	case res := <-c1:
+		fmt.Println(res)
+	}
 }
