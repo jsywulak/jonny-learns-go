@@ -23,4 +23,9 @@ func TestTimeouts(t *testing.T) {
 		fmt.Println("timeout 1")
 	}
 
+	c2 := make(chan string, 1)
+	go func() {
+		time.Sleep(2*time.Second)
+		c2 <- "result 2"
+	}
 }
