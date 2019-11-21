@@ -14,7 +14,7 @@ var mutex = &sync.Mutex{}
 
 func f(from string) {
 	for i := 0; i < 5; i++ {
-		time.Sleep(time.Second / 100)
+		time.Sleep(time.Second / 1000)
 	}
 	mutex.Lock()
 	dones[from] = true
@@ -28,7 +28,8 @@ func TestRoutines(t *testing.T) {
 	go func(msg string) {
 		fmt.Println(msg)
 	}("going")
-
+	// just to make sure everything finished up
+	time.Sleep(time.Second / 1000)
 	assert.True(t, dones["goroutine"])
 	assert.True(t, dones["direct"])
 
