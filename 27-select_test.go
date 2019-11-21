@@ -23,6 +23,10 @@ func TestSelect(t *testing.T) {
 	}()
 
 	for i := 0; i < 2; i++ {
-
+		select {
+		case msg1 := <-c1:
+			fmt.Println("received": msg1)
+		case msg2 := <-c2:
+			fmt.Println("received": msg2)
 	}
 }
