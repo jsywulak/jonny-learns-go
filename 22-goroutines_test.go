@@ -26,7 +26,7 @@ func TestRoutines(t *testing.T) {
 
 	go func(msg string) {}("going")
 	// just to make sure everything finished up
-	time.Sleep(time.Second / 1000)
+	time.Sleep(time.Second / 100)
 	assert.True(t, dones["goroutine"])
 	assert.True(t, dones["direct"])
 
