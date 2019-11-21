@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"testing"
-	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -14,12 +13,12 @@ func TestSelect(t *testing.T) {
 	c2 := make(chan string)
 
 	go func() {
-		time.Sleep(time.Second)
+		// time.Sleep(time.Second)
 		c1 <- "one"
 	}()
 
 	go func() {
-		time.Sleep(2 * time.Second)
+		// time.Sleep(2 * time.Second)
 		c2 <- "two"
 	}()
 
