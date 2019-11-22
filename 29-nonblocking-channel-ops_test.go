@@ -41,6 +41,8 @@ func TestNonblockingChannelOps(t *testing.T) {
 		assert.True(t, true, "Should have gotten into this branch")
 	}
 
+	// go func() { messages <- "ping" }()
+
 	select {
 	case msg := <-messages:
 		assert.Fail(t, "should not have gotten into this branch")
