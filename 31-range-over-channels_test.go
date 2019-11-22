@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -16,7 +15,7 @@ func TestRangeOverChannels(t *testing.T) {
 	close(queue)
 
 	for elem := range queue {
-		fmt.Println(elem)
+		assert.NotNil(t, elem, "elem should have a value")
 	}
 
 }
