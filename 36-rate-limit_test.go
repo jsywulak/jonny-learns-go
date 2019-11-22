@@ -29,7 +29,7 @@ func TestRateLimits(t *testing.T) {
 	}
 
 	burstyLimiter := make(chan time.Time, 3)
-	for i := 1; i < 3; i++ {
+	for i := 0; i < 3; i++ {
 		burstyLimiter <- time.Now()
 	}
 	// this is where you planted the tree
