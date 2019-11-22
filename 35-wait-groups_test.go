@@ -12,8 +12,6 @@ func waitgroupworker(id int, wg *sync.WaitGroup) {
 }
 
 func TestWaitGroups(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	var wg sync.WaitGroup
 	workercount := 0
 	for i := 1; i <= 5; i++ {
