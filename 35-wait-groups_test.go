@@ -18,4 +18,10 @@ func waitgroupworker(id int, wg *sync.WaitGroup) {
 
 func TestWaitGroups(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
+	var wg sync.WaitGroup
+	for i := 1; i <= 5; i++ {
+		wg.Add(1)
+		go waitgroupworker(i, &wg)
+	}
 }
