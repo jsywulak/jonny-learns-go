@@ -28,10 +28,12 @@ func TestNonblockingChannelOps(t *testing.T) {
 	}
 
 	select {
-	case msg:= <-messages:
+	case msg := <-messages:
 		fmt.Println("received message", msg)
-	case sig := <signals
+	case sig := <-signals:
 		fmt.Println("recived signal", sig)
+	default:
+		fmt.Println("no activity")
 	}
 
 }
