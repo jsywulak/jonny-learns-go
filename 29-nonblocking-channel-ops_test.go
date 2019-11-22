@@ -42,7 +42,7 @@ func TestNonblockingChannelOps(t *testing.T) {
 	}
 
 	go func() { messages <- "ping" }()
-
+	// time.sleep(time.Second)
 	select {
 	case msg := <-messages:
 		fmt.Println("received message", msg)
