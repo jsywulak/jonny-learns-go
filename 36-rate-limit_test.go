@@ -12,7 +12,7 @@ func TestRateLimits(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	requests := make(chan int, 5)
-	for i := 0; i < 5; i++ {
+	for i := 1; i <= 5; i++ {
 		requests <- i
 	}
 	close(requests)
@@ -25,7 +25,7 @@ func TestRateLimits(t *testing.T) {
 	}
 
 	burstyLimiter := make(chan time.Time, 3)
-	for i := 0; i < 3; i++ {
+	for i := 1; i < 3; i++ {
 		burstyLimiter <- time.Now()
 	}
 	// this is where you planted the tree
