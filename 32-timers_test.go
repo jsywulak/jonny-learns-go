@@ -18,6 +18,6 @@ func TestTimers(t *testing.T) {
 	timer2 := time.NewTimer(time.Second)
 	go func() {
 		<-timer2.C
-
+		fmt.Println("timer 2 expired")
 	}()
 }
