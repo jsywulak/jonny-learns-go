@@ -16,10 +16,8 @@ func waitgroupworker(id int, wg *sync.WaitGroup) {
 
 func TestWaitGroups(t *testing.T) {
 	var wg sync.WaitGroup
-	workercount := 0
 	for i := 1; i <= 5; i++ {
 		wg.Add(1)
-		workercount++
 		go waitgroupworker(i, &wg)
 	}
 	wg.Wait()
