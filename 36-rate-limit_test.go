@@ -16,7 +16,7 @@ func TestRateLimits(t *testing.T) {
 	}
 	close(requests)
 
-	limiter := time.Tick(200 * time.Millisecond)
+	limiter := time.Tick(20 * time.Millisecond)
 
 	last_time := time.Now()
 	for range requests {
@@ -32,7 +32,7 @@ func TestRateLimits(t *testing.T) {
 	}
 	// this is where you planted the tree
 	go func() {
-		for tt := range time.Tick(200 * time.Millisecond) {
+		for tt := range time.Tick(20 * time.Millisecond) {
 			burstyLimiter <- tt
 		}
 	}()
