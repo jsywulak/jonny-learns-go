@@ -15,10 +15,12 @@ func TestWaitGroups(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	var wg sync.WaitGroup
+	count := 0
 	for i := 1; i <= 5; i++ {
 		wg.Add(1)
+		count++
 		go waitgroupworker(i, &wg)
 	}
 	wg.Wait()
-
+	assert.Equal(t, 5, count)
 }
