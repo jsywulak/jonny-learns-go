@@ -20,7 +20,7 @@ func TestTickers(t *testing.T) {
 			case <-done:
 				return
 			case t := <-ticker.C:
-				fmt.Println("Ticker at ", t)
+				fmt.Println("Ticker at", t)
 			}
 		}
 	}()
