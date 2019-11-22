@@ -7,6 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+var wc int = 0
+
 func waitgroupworker(id int, wg *sync.WaitGroup) {
 	wg.Done()
 }
