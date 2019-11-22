@@ -20,7 +20,7 @@ func TestRateLimits(t *testing.T) {
 	limiter := time.Tick(200 * time.Millisecond)
 
 	last_time := time.Now()
-	for req := range requests {
+	for range requests {
 		<-limiter
 		now := time.Now()
 		assert.WithinDuration(t, last_time, now, 210*time.Millisecond)
