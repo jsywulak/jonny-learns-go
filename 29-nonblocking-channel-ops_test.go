@@ -11,6 +11,7 @@ func TestNonblockingChannelOps(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	messages := make(chan string)
 	signals := make(chan bool)
+	messages <- "hi"
 	select {
 	case msg := <-messages:
 		fmt.Println("received message", msg)
