@@ -25,7 +25,7 @@ func TestTickers(t *testing.T) {
 		}
 	}()
 
-	time.Sleep(1600 * time.Millisecond)
+	time.Sleep(30 * time.Millisecond)
 	ticker.Stop()
 	done <- true
 }
