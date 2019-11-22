@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -45,11 +44,11 @@ func TestRateLimits(t *testing.T) {
 	close(burstyRequests)
 	last_time = time.Now()
 
-	for req := range burstyRequests {
+	for range burstyRequests {
 		<-burstyLimiter
 		now := time.Now()
 		diff := now.Sub(last_time)
-		fmt.Println(diff, req)
+		assert.WithinDuration(t, last_time, now, 210*time.Millisecond)
 		last_time = now
 	}
 }
