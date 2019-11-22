@@ -21,7 +21,13 @@ func poolworker(id int, jobs <-chan int, results chan<- int) {
 func TestWorkerPools(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
-	jobs := make(chan int, 1000)
+	jobs := make(chan int, 100)
+	results := make(chan int, 100)
+
+	for w := 1; w <= 3; w++ {
+		go poolworker(w, jobs, results)
+	}
+
 	close(jobs)
 
 }
