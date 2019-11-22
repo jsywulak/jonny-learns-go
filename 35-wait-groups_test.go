@@ -20,4 +20,5 @@ func TestWaitGroups(t *testing.T) {
 		go waitgroupworker(i, &wg)
 	}
 	wg.Wait()
+
 }
