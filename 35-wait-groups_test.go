@@ -1,12 +1,13 @@
 package main
 
 import (
+	"sync"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func waitgroupworker() {}
+func waitgroupworker(id int, wg *sync.WaitGroup) {}
 
 func TestWaitGroups(t *testing.T) {
 	assert.Equal(t, 1, 1)
