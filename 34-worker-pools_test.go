@@ -33,8 +33,8 @@ func TestWorkerPools(t *testing.T) {
 	for a := 1; a <= 5; a++ {
 		res := <-results
 		fmt.Println("a[", a, "] is ", res)
-		// b := [5]int{1, 2, 3, 4, 5}
-		// assert.Contains(t, b, a, "result not in expected result set")
+		expected := [5]int{2, 4, 6, 8, 10}
+		assert.Contains(t, expected, res, "result not in expected result set")
 	}
 
 }
