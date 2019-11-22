@@ -19,9 +19,12 @@ func TestRateLimits(t *testing.T) {
 
 	limiter := time.Tick(200 * time.Millisecond)
 
+	last_time := time.Now()
 	for req := range requests {
 		<-limiter
-		fmt.Println("request", req, time.Now())
+		now = time.Now()
+		fmt.Println("request", req, now)
+
 	}
 
 	burstyLimiter := make(chan time.Time, 3)
