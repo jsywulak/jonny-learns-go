@@ -24,9 +24,10 @@ func TestNonblockingChannelOps(t *testing.T) {
 
 	select {
 	case messages <- msg:
+		assert.Fail(t, "should not have gotten into this branch")
 		fmt.Println("sent message")
 	default:
-		fmt.Println("no message sent")
+		assert.True(t, true, "Should have gotten into this branch")
 	}
 
 	select {
