@@ -31,6 +31,6 @@ func TestClosingChannels(t *testing.T) {
 	}
 
 	close(jobs)
-	<-done
+	asser.True(t, <-done, "should have received all jobs")
 
 }
