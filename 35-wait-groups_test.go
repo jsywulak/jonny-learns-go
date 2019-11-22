@@ -8,9 +8,6 @@ import (
 )
 
 func waitgroupworker(id int, wg *sync.WaitGroup) {
-	// fmt.Printf("Worker %d starting\n", id)
-	// time.Sleep(time.Second)
-	// fmt.Printf("Worker %d complete\n", id)
 	wg.Done()
 }
 
