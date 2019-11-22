@@ -28,5 +28,8 @@ func TestRateLimits(t *testing.T) {
 	for i := 0; i < 3; i++ {
 		burstyLimiter <- time.Now()
 	}
+	// this is where you planted the tree
+	go func() {
 
+	}()
 }
