@@ -24,7 +24,7 @@ func TestRateLimits(t *testing.T) {
 		<-limiter
 		now := time.Now()
 		// fmt.Println("request", req, now)
-		fmt.Println("diff", now.Sub(last_time))
+		fmt.Println("diff", now.Sub(last_time), req)
 		last_time = now
 	}
 
@@ -50,7 +50,7 @@ func TestRateLimits(t *testing.T) {
 		<-burstyLimiter
 		now := time.Now()
 		// fmt.Println("request", req, now)
-		fmt.Println("diff", now.Sub(last_time))
+		fmt.Println("diff", now.Sub(last_time), req)
 		last_time = now
 	}
 }
