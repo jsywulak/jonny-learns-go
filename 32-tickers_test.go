@@ -11,7 +11,7 @@ import (
 func TestTickers(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
-	ticker := time.NewTicker(500 * time.Millisecond)
+	ticker := time.NewTicker(10 * time.Millisecond)
 	done := make(chan bool)
 
 	go func() {
