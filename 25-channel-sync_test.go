@@ -8,10 +8,10 @@ import (
 
 func TestChannelSync(t *testing.T) {
 	done := make(chan bool, 1)
-	go worker(done)
+	go channelSyncWorker(done)
 	assert.True(t, <-done)
 }
 
-func worker(done chan bool) {
+func channelSyncWorker(done chan bool) {
 	done <- true
 }
