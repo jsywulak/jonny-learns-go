@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -32,7 +31,6 @@ func TestWorkerPools(t *testing.T) {
 
 	for a := 1; a <= 5; a++ {
 		res := <-results
-		fmt.Println("a[", a, "] is ", res)
 		expected := [5]int{2, 4, 6, 8, 10}
 		assert.Contains(t, expected, res, "result not in expected result set")
 	}
