@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -22,7 +21,7 @@ func TestTickers(t *testing.T) {
 				assert.Equal(t, 3, count, "should have ticked three times")
 				return
 			case tick := <-ticker.C:
-				fmt.Println("Ticker at", tick)
+				// fmt.Println("Ticker at", tick)
 				assert.NotNil(t, tick, "tick should be valued")
 				count++
 			}
