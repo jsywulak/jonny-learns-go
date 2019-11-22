@@ -18,7 +18,7 @@ func TestTimers(t *testing.T) {
 	timer2 := time.NewTimer(time.Second)
 	go func() {
 		<-timer2.C
-		fmt.Println("timer 2 expired")
+		assert.Fail(t, "should execute this branch")
 	}()
 	stop2 := timer2.Stop()
 	assert.NotNil(t, stop2, "stop 2 should be valued")
