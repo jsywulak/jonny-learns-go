@@ -19,8 +19,9 @@ func TestTickers(t *testing.T) {
 			select {
 			case <-done:
 				return
-			case t := <-ticker.C:
-				fmt.Println("Ticker at", t)
+			case tick := <-ticker.C:
+				fmt.Println("Ticker at", tick)
+				assert.NotNil(t, tick, "tick should be valued")
 			}
 		}
 	}()
