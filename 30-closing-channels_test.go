@@ -20,6 +20,7 @@ func TestClosingChannels(t *testing.T) {
 			j, more := <-jobs
 			if more {
 				fmt.Println("received job", j)
+				assert.True(t, 0 < j && j < 4, "j should be 1-3")
 				assert.True(t, j > previous, "j should be consecutive numbers")
 				count++
 			} else {
