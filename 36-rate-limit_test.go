@@ -44,7 +44,7 @@ func TestRateLimits(t *testing.T) {
 		burstyRequests <- i
 	}
 	close(burstyRequests)
-	last_time := time.Now()
+	last_time = time.Now()
 
 	for req := range burstyRequests {
 		<-burstyLimiter
