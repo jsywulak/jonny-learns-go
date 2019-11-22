@@ -21,7 +21,6 @@ func TestClosingChannels(t *testing.T) {
 				fmt.Println("received job", j)
 				count++
 			} else {
-				fmt.Println("received all jobs")
 				assert.Equal(t, 3, count, "should have received three jobs")
 				done <- true
 				return
