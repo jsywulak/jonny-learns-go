@@ -30,7 +30,6 @@ func TestWorkerPools(t *testing.T) {
 	close(jobs)
 
 	for a := 1; a <= 5; a++ {
-		// res :=
 		expected := [5]int{2, 4, 6, 8, 10}
 		assert.Contains(t, expected, <-results, "result not in expected result set")
 	}
