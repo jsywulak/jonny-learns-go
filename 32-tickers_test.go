@@ -15,13 +15,16 @@ func TestTickers(t *testing.T) {
 	done := make(chan bool)
 
 	go func() {
+		count := 0
 		for {
 			select {
 			case <-done:
+				assert.Equal(t, 3, count, "should have ticked three times")
 				return
 			case tick := <-ticker.C:
 				fmt.Println("Ticker at", tick)
 				assert.NotNil(t, tick, "tick should be valued")
+				count++
 			}
 		}
 	}()
