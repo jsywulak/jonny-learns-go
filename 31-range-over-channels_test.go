@@ -16,6 +16,7 @@ func TestRangeOverChannels(t *testing.T) {
 
 	for elem := range queue {
 		assert.NotNil(t, elem, "elem should have a value")
+		assert.True(t, elem == "one" || elem == "two", "elem should be one or two")
 	}
 
 }
