@@ -21,9 +21,6 @@ func TestTimers(t *testing.T) {
 		fmt.Println("timer 2 expired")
 	}()
 	stop2 := timer2.Stop()
-	if stop2 {
-		fmt.Println("timer 2 stopped")
-		assert.NotNil(t, stop2, "stop 2 should be valued")
-	}
+	assert.NotNil(t, stop2, "stop 2 should be valued")
 
 }
