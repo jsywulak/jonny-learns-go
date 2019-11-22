@@ -33,7 +33,7 @@ func TestRateLimits(t *testing.T) {
 	}
 	// this is where you planted the tree
 	go func() {
-		for tt := range time.Tick(2 * time.Millisecond) {
+		for tt := range time.Tick(200 * time.Millisecond) {
 			burstyLimiter <- tt
 		}
 	}()
