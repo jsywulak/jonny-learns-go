@@ -32,5 +32,7 @@ func TestClosingChannels(t *testing.T) {
 	}
 
 	close(jobs)
+	fmt.Println("sent all jobs")
+	<-done
 
 }
