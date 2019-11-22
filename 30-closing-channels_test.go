@@ -15,10 +15,12 @@ func TestClosingChannels(t *testing.T) {
 
 	go func() {
 		count := 0
+		previous := 0
 		for {
 			j, more := <-jobs
 			if more {
 				fmt.Println("received job", j)
+				assert.True(t, j > previous, "j should be consecutive numbers")
 				count++
 			} else {
 				assert.Equal(t, 3, count, "should have received three jobs")
