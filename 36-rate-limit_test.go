@@ -24,6 +24,9 @@ func TestRateLimits(t *testing.T) {
 		fmt.Println("request", req, time.Now())
 	}
 
-	// burstyLimiter := make(chan time.Time(), 3)
+	burstyLimiter := make(chan time.Time, 3)
+	for i := 0; i < 3; i++ {
+		burstyLimiter <- time.Now()
+	}
 
 }
