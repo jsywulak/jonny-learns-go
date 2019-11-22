@@ -3,6 +3,7 @@ package main
 import (
 	"sync"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -11,6 +12,7 @@ var workercount int = 0
 
 func waitgroupworker(id int, wg *sync.WaitGroup) {
 	workercount++
+	time.Sleep(time.Millisecond)
 	wg.Done()
 }
 
