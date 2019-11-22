@@ -28,6 +28,10 @@ func TestWorkerPools(t *testing.T) {
 		go poolworker(w, jobs, results)
 	}
 
+	for j := 1; j <= 5; j++ {
+		jobs <- j
+	}
+
 	close(jobs)
 
 }
