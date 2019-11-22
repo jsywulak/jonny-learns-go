@@ -51,7 +51,7 @@ func TestRateLimits(t *testing.T) {
 		if count < 3 {
 			assert.WithinDuration(t, last_time, now, 21*time.Millisecond)
 		} else {
-			assert.WithinDuration(t, last_time, now, 210*time.Millisecond)
+			assert.WithinDuration(t, last_time, now, 215*time.Millisecond)
 		}
 		count++
 		last_time = now
