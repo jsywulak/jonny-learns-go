@@ -12,7 +12,7 @@ func TestRateLimits(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	requests := make(chan int, 5)
-	for i := 1; i <= 5; i++ {
+	for i := 0; i < 5; i++ {
 		requests <- i
 	}
 	close(requests)
@@ -23,5 +23,7 @@ func TestRateLimits(t *testing.T) {
 		<-limiter
 		fmt.Println("request", req, time.Now())
 	}
+
+	// burstyLimiter := make(chan time.Time(), 3)
 
 }
