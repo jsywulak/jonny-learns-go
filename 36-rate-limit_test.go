@@ -47,7 +47,6 @@ func TestRateLimits(t *testing.T) {
 	for range burstyRequests {
 		<-burstyLimiter
 		now := time.Now()
-		diff := now.Sub(last_time)
 		assert.WithinDuration(t, last_time, now, 210*time.Millisecond)
 		last_time = now
 	}
