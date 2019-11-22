@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -8,4 +9,11 @@ import (
 
 func TestNonblockingChannelOps(t *testing.T) {
 	assert.Equal(t, 1, 1)
+	messages := make(chan string)
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	default:
+		fmt.Println("no message received")
+	}
 }
