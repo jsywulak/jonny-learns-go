@@ -16,4 +16,14 @@ func TestNonblockingChannelOps(t *testing.T) {
 	default:
 		fmt.Println("no message received")
 	}
+
+	msg := "hi"
+
+	select {
+	case messages <- msg:
+		fmt.Println("sent message")
+	default:
+		fmt.Println("no message sent")
+	}
+
 }
