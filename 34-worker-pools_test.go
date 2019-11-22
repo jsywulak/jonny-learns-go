@@ -32,7 +32,8 @@ func TestWorkerPools(t *testing.T) {
 
 	for a := 1; a <= 5; a++ {
 		fmt.Println("a[", a, "] is ", <-results)
-		assert.Contains(t, [2,4,6,8,10], a)
+		b := [5]int{1, 2, 3, 4, 5}
+		assert.Contains(t, b, a)
 	}
 
 }
