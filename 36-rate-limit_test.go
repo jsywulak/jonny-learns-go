@@ -49,7 +49,7 @@ func TestRateLimits(t *testing.T) {
 		<-burstyLimiter
 		now := time.Now()
 		if count < 3 {
-			assert.WithinDuration(t, last_time, now, 22*time.Millisecond)
+			assert.WithinDuration(t, last_time, now, 5*time.Millisecond)
 		} else {
 			assert.WithinDuration(t, last_time, now, 220*time.Millisecond)
 		}
