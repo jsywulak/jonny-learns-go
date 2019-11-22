@@ -43,5 +43,4 @@ func TestNonblockingChannelOps(t *testing.T) {
 	default:
 		assert.True(t, true, "Should have gotten into this branch")
 	}
-
 }
