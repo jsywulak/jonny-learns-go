@@ -18,5 +18,4 @@ func TestRangeOverChannels(t *testing.T) {
 		assert.NotNil(t, elem, "elem should have a value")
 		assert.True(t, elem == "one" || elem == "two", "elem should be 'one' or 'two'")
 	}
-
 }
