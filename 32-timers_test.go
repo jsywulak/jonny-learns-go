@@ -20,4 +20,9 @@ func TestTimers(t *testing.T) {
 		<-timer2.C
 		fmt.Println("timer 2 expired")
 	}()
+	stop2 := timer2.Stop()
+	if stop2 {
+		fmt.Println("timer 2 stopped")
+	}
+
 }
