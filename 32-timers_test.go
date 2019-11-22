@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -13,7 +12,7 @@ func TestTimers(t *testing.T) {
 
 	timer1 := time.NewTimer(time.Second / 1000)
 	<-timer1.C
-	fmt.Println("timer 1 expired")
+	// fmt.Println("timer 1 expired")
 
 	timer2 := time.NewTimer(time.Second)
 	go func() {
