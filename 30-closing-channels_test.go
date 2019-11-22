@@ -8,4 +8,9 @@ import (
 
 func TestClosingChannels(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
+	jobs := make(chan int, 5)
+
+	close(jobs)
+
 }
