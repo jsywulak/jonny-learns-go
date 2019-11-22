@@ -10,6 +10,7 @@ import (
 var wc int = 0
 
 func waitgroupworker(id int, wg *sync.WaitGroup) {
+	wc++
 	wg.Done()
 }
 
@@ -22,5 +23,5 @@ func TestWaitGroups(t *testing.T) {
 		go waitgroupworker(i, &wg)
 	}
 	wg.Wait()
-	assert.Equal(t, 5, workercount, "should have five workers")
+	assert.Equal(t, 5, wc, "should have five workers")
 }
