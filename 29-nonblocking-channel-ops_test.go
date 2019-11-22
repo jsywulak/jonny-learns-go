@@ -39,6 +39,7 @@ func TestNonblockingChannelOps(t *testing.T) {
 		fmt.Println("recived signal", sig)
 	default:
 		fmt.Println("no activity")
+		assert.True(t, true, "Should have gotten into this branch")
 	}
 
 }
