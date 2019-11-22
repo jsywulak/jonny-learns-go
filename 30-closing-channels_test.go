@@ -14,10 +14,12 @@ func TestClosingChannels(t *testing.T) {
 	done := make(chan bool)
 
 	go func() {
+		count := 0
 		for {
 			j, more := <-jobs
 			if more {
 				fmt.Println("received job", j)
+				count++
 			} else {
 				fmt.Println("received all jobs")
 				done <- true
