@@ -28,11 +28,9 @@ func TestClosingChannels(t *testing.T) {
 
 	for j := 1; j <= 3; j++ {
 		jobs <- j
-		// fmt.Println("sent job", j)
 	}
 
 	close(jobs)
-	// fmt.Println("sent all jobs")
 	<-done
 
 }
