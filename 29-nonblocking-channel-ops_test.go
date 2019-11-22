@@ -17,7 +17,7 @@ func TestNonblockingChannelOps(t *testing.T) {
 		fmt.Println("received message", msg)
 	default:
 		assert.True(t, true, "Should have gotten into this branch")
-		fmt.Println("no message received")
+		// fmt.Println("no message received")
 	}
 
 	msg := "hi"
