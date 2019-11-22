@@ -17,7 +17,7 @@ func TestRateLimits(t *testing.T) {
 	}
 	close(requests)
 
-	limiter := time.Tick(20 * time.Millisecond)
+	limiter := time.Tick(2 * time.Millisecond)
 
 	last_time := time.Now()
 	for req := range requests {
