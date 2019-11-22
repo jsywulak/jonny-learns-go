@@ -11,7 +11,7 @@ import (
 func TestTimers(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
-	timer1 := time.NewTimer(2 * time.Second)
+	timer1 := time.NewTimer(time.Second)
 	<-timer1.C
 	fmt.Println("timer 1 expired")
 
