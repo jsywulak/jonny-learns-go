@@ -9,7 +9,6 @@ import (
 )
 
 func TestAtomicCounters(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	var opsSafe uint64
 	var opsDanger uint64
 	var wg sync.WaitGroup
