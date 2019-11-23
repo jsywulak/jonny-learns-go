@@ -7,8 +7,6 @@ import (
 )
 
 func TestRangeOverChannels(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	queue := make(chan string, 2)
 	queue <- "one"
 	queue <- "two"
