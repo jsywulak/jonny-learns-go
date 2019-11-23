@@ -43,6 +43,9 @@ func TestStatefulGoRoutines(t *testing.T) {
 	}()
 
 	for r := 0; r < 100; r++ {
+		go func() {
+
+		}()
 	}
 
 	for w := 0; w < 10; w++ {
