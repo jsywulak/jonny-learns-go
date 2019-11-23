@@ -40,6 +40,9 @@ func TestStatefulGoRoutines(t *testing.T) {
 		}
 	}()
 
+	for r := 0; r < 100; r++ {
+	}
+
 	fmt.Println(readOps, writeOps, reads, writes)
 
 }
