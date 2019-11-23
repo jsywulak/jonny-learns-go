@@ -26,6 +26,7 @@ func TestSorting(t *testing.T) {
 
 	sort.Ints(ints)
 	assert.True(t, sort.IntsAreSorted(ints))
+	assert.Equal(t, []int{2, 4, 7}, ints)
 	is = sort.IntsAreSorted(ints)
 
 	fmt.Println("ints:", ints)
