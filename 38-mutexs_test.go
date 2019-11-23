@@ -36,7 +36,15 @@ func TestMutexes(t *testing.T) {
 
 	for w := 0; w < 10; w++ {
 		go func() {
-
+			for {
+				key := rand.Intn(5)
+				val := rand.Intn(100)
+				mutex.Lock()
+				state[key] = val
+				mutex.Unlock()
+				atomic.AddInt64(&writeOps, 1)
+				time.Sleep(time.Millisecond)
+			}
 		}()
 	}
 
