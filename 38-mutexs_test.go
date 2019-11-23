@@ -51,10 +51,10 @@ func TestMutexes(t *testing.T) {
 	time.Sleep(time.Second / 100)
 
 	readOpsFinal := atomic.LoadUint64(&readOps)
-	fmt.Println("readOps:", readOpsFinal)
+	// fmt.Println("readOps:", readOpsFinal)
 
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
-	fmt.Println("writeOps:", writeOpsFinal)
+	// fmt.Println("writeOps:", writeOpsFinal)
 
 	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
 
