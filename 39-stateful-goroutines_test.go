@@ -7,18 +7,17 @@ import (
 )
 
 type ReadOp struct {
-	key int
+	key  int
 	resp chan int
 }
 
-type WriteOp {
-	key int
-	val int
+type WriteOp struct {
+	key  int
+	val  int
 	resp chan bool
 }
 
 func TestStatefulGoRoutines(t *testing.T) {
 	assert.Equal(t, 1, 1)
-
 
 }
