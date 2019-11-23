@@ -30,4 +30,5 @@ func TestAtomicCounters(t *testing.T) {
 	fmt.Println("ops:", opsSafe)
 	assert.Equal(t, uint64(50000), opsSafe)
 	fmt.Println("ops:", opsDanger)
+	assert.NotEqual(t, uint64(50000), opsDanger)
 }
