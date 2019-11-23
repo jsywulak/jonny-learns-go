@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"sync"
 	"sync/atomic"
@@ -61,13 +60,7 @@ func TestMutexes(t *testing.T) {
 	assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
 
 	mutex.Lock()
-	fmt.Println("state:", state)
-	total := 0
-	for _, v := range state {
-		total += v
-	}
-	fmt.Println("total:", total)
-
+	// fmt.Println("state:", state)
 	mutex.Unlock()
 
 }
