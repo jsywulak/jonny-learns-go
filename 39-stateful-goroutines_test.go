@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync/atomic"
 	"testing"
 	"time"
 
@@ -49,6 +50,11 @@ func TestStatefulGoRoutines(t *testing.T) {
 	}
 
 	time.Sleep(time.Second)
+
+	readOpsFinal := atomic.LoadUint64(&readOps)
+	fmt.Println("read ops:", readOpsFinal)
+	writeOpsFinal := atomic.LoadUint64(&writeOps)
+	fmt.Println("write ops:", writeOpsFinal)
 
 	fmt.Println(readOps, writeOps, reads, writes)
 
