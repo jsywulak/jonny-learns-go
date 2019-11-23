@@ -64,7 +64,6 @@ func TestMutexes(t *testing.T) {
 	fmt.Println("state:", state)
 	total := 0
 	for _, v := range state {
-		// assert.Equal(t, kvs[k], v)
 		total += v
 	}
 	fmt.Println("total:", total)
