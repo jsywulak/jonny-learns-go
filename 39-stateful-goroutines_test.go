@@ -81,6 +81,6 @@ func TestStatefulGoRoutines(t *testing.T) {
 	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
 	fmt.Println("ratio:", ratio)
 
-	// assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
+	assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
 
 }
