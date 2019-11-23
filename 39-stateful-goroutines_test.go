@@ -66,6 +66,8 @@ func TestStatefulGoRoutines(t *testing.T) {
 					resp: make(chan bool)}
 				writes <- write
 				<-write.resp
+				atomic.AddUint64(&writeOps, 1)
+				time.sleep(time.Millisecond)
 			}
 		}()
 	}
