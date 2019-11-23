@@ -21,8 +21,6 @@ type writeOp struct {
 }
 
 func TestStatefulGoRoutines(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	var readOps uint64
 	var writeOps uint64
 
