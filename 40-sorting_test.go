@@ -14,4 +14,8 @@ func TestSorting(t *testing.T) {
 	strs := []string{"c", "a", "b"}
 	sort.Strings(strs)
 	fmt.Println("Strings:", strs)
+
+	ints := []int{7, 2, 4}
+	sort.Ints(ints)
+	fmt.Println("ints:", ints)
 }
