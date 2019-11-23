@@ -8,8 +8,6 @@ import (
 )
 
 func TestSorting(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	strs := []string{"c", "a", "b"}
 	assert.False(t, sort.StringsAreSorted(strs))
 
