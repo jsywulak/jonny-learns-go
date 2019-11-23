@@ -7,7 +7,6 @@ import (
 )
 
 func TestSelect(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	c1 := make(chan string)
 	c2 := make(chan string)
 
