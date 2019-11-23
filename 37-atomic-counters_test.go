@@ -23,5 +23,7 @@ func TestAtomicCounters(t *testing.T) {
 			wg.Done()
 		}()
 	}
-	fmt.Print(ops, wg)
+
+	wg.Wait()
+	fmt.Println("ops:", ops)
 }
