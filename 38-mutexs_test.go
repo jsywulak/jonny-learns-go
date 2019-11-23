@@ -62,5 +62,4 @@ func TestMutexes(t *testing.T) {
 	mutex.Lock()
 	// fmt.Println("state:", state)
 	mutex.Unlock()
-
 }
