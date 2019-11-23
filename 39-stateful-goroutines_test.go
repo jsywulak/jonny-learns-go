@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-type ReadOp struct {
+type readOp struct {
 	key  int
 	resp chan int
 }
 
-type WriteOp struct {
+type writeOp struct {
 	key  int
 	val  int
 	resp chan bool
@@ -25,7 +25,7 @@ func TestStatefulGoRoutines(t *testing.T) {
 	var writeOps uint64
 
 	reads := make(chan readOp)
-	writes := make(chan writeOps)
+	writes := make(chan writeOp)
 
 	fmt.Println(readOps, writeOps, reads, writes)
 
