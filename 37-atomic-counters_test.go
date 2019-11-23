@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -10,6 +11,6 @@ import (
 func TestAtomicCounters(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	var ops uint64
-	var wg sync.Waitgroup
+	var wg sync.WaitGroup
 	fmt.Print(ops, wg)
 }
