@@ -15,7 +15,12 @@ func TestAtomicCounters(t *testing.T) {
 
 	for i := 0; i < 50; i++ {
 		wg.Add(1)
-
+		go func() {
+			for c := 0; c < 1000; c++ {
+				atomic.AddUnit64(&ops, 1)
+			}
+			wg.Done()
+		}()
 	}
 	fmt.Print(ops, wg)
 }
