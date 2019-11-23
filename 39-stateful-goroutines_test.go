@@ -79,7 +79,7 @@ func TestStatefulGoRoutines(t *testing.T) {
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("write ops:", writeOpsFinal)
 	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
-	fmt.Println("radio:", ratio)
+	fmt.Println("ratio:", ratio)
 
 	// assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
 
