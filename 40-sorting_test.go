@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"sort"
 	"testing"
 
@@ -12,5 +13,5 @@ func TestSorting(t *testing.T) {
 
 	strs := []string{"c", "a", "b"}
 	sort.Strings(strs)
-
+	fmt.Println("Strings:", strs)
 }
