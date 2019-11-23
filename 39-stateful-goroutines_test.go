@@ -49,7 +49,9 @@ func TestStatefulGoRoutines(t *testing.T) {
 	}
 
 	for w := 0; w < 10; w++ {
+		go func() {
 
+		}()
 	}
 
 	time.Sleep(time.Second)
