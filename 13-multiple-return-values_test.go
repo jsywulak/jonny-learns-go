@@ -11,7 +11,6 @@ func vals() (int, int) {
 }
 
 func TestMultipleReturnValues(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	a, b := vals()
 	assert.Equal(t, 3, a)
 	assert.Equal(t, 7, b)
