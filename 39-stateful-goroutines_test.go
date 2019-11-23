@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -46,6 +47,8 @@ func TestStatefulGoRoutines(t *testing.T) {
 	for w := 0; w < 10; w++ {
 
 	}
+
+	time.Sleep(time.Second)
 
 	fmt.Println(readOps, writeOps, reads, writes)
 
