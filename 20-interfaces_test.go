@@ -44,7 +44,6 @@ func measure(g geometry) {
 }
 
 func TestInterfaces(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	r := reckt{width: 3, height: 4}
 	c := circle{radius: 5}
 

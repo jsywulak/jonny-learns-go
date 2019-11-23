@@ -7,7 +7,6 @@ import (
 )
 
 func TestChannelDirections(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	pings := make(chan string, 1)
 	pongs := make(chan string, 1)
 	ping(pings, "passed message")
