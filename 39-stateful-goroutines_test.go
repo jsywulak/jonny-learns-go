@@ -59,6 +59,13 @@ func TestStatefulGoRoutines(t *testing.T) {
 
 	for w := 0; w < 10; w++ {
 		go func() {
+			write := writeOp{
+				key: rand.Intn(5),
+				value: rand.Intn(100),
+				resp: make(chan bool)
+			}
+			writes <- write
+			<- write.resp
 
 		}()
 	}
