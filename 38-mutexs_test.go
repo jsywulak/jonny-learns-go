@@ -14,6 +14,13 @@ func TestMutexes(t *testing.T) {
 	var mutex = &sync.Mutex{}
 
 	var readOps uint64
+
+	for r := 0; r < 100; r++ {
+		go func() {
+
+		}()
+	}
+
 	var writeOps uint64
 
 	fmt.Println(state, mutex, readOps, writeOps)
