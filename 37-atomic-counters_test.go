@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"sync/atomic"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -17,7 +18,7 @@ func TestAtomicCounters(t *testing.T) {
 		wg.Add(1)
 		go func() {
 			for c := 0; c < 1000; c++ {
-				atomic.AddUnit64(&ops, 1)
+				atomic.AddUint64(&ops, 1)
 			}
 			wg.Done()
 		}()
