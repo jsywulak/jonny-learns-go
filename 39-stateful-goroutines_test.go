@@ -72,7 +72,7 @@ func TestStatefulGoRoutines(t *testing.T) {
 		}()
 	}
 
-	time.Sleep(time.Second)
+	time.Sleep(time.Second / 100)
 
 	readOpsFinal := atomic.LoadUint64(&readOps)
 	fmt.Println("read ops:", readOpsFinal)
