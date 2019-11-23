@@ -79,6 +79,4 @@ func TestStatefulGoRoutines(t *testing.T) {
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("write ops:", writeOpsFinal)
 
-	fmt.Println(readOps, writeOps, reads, writes)
-
 }
