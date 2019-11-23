@@ -67,7 +67,7 @@ func TestStatefulGoRoutines(t *testing.T) {
 				writes <- write
 				<-write.resp
 				atomic.AddUint64(&writeOps, 1)
-				time.sleep(time.Millisecond)
+				time.Sleep(time.Millisecond)
 			}
 		}()
 	}
