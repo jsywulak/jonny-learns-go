@@ -48,5 +48,9 @@ func TestMutexes(t *testing.T) {
 		}()
 	}
 
-	fmt.Println(state, mutex, readOps, writeOps)
+	time.Sleep(time.Second)
+
+	readOpsFinal := atomic.LoadUint64(&readOps)
+
+	fmt.Println(state, mutex, readOps, writeOps, readOpsFinal)
 }
