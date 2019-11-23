@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sync"
 	"sync/atomic"
 	"testing"
@@ -27,8 +26,6 @@ func TestAtomicCounters(t *testing.T) {
 	}
 
 	wg.Wait()
-	fmt.Println("ops:", opsSafe)
 	assert.Equal(t, uint64(50000), opsSafe)
-	fmt.Println("ops:", opsDanger)
 	assert.NotEqual(t, uint64(50000), opsDanger)
 }
