@@ -27,6 +27,8 @@ func TestStatefulGoRoutines(t *testing.T) {
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
 
+	go func() {}()
+
 	fmt.Println(readOps, writeOps, reads, writes)
 
 }
