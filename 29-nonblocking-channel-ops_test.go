@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestNonblockingChannelOps(t *testing.T) {
+func TestNonBlockingChannelOps(t *testing.T) {
 	messages := make(chan string)
 	signals := make(chan bool)
 	select {
