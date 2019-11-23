@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"sync/atomic"
 	"testing"
 	"time"
@@ -45,8 +46,8 @@ func TestStatefulGoRoutines(t *testing.T) {
 	for r := 0; r < 100; r++ {
 		go func() {
 			for {
-				read:= readOp {
-					key: rand.Intn(5)
+				read := readOp{
+					key:  rand.Intn(5),
 					resp: make(chan int)}
 				reads <- read
 				<-read.resp
