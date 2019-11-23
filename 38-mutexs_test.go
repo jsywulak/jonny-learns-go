@@ -42,7 +42,7 @@ func TestMutexes(t *testing.T) {
 				mutex.Lock()
 				state[key] = val
 				mutex.Unlock()
-				atomic.AddInt64(&writeOps, 1)
+				atomic.AddUint64(&writeOps, 1)
 				time.Sleep(time.Millisecond)
 			}
 		}()
