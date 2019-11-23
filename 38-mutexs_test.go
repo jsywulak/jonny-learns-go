@@ -35,7 +35,7 @@ func TestMutexes(t *testing.T) {
 	var writeOps uint64
 
 	for w := 0; w < 10; w++ {
-
+		go func() {}()
 	}
 
 	fmt.Println(state, mutex, readOps, writeOps)
