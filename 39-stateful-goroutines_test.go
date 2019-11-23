@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"sync/atomic"
 	"testing"
@@ -75,12 +74,8 @@ func TestStatefulGoRoutines(t *testing.T) {
 	time.Sleep(time.Second / 100)
 
 	readOpsFinal := atomic.LoadUint64(&readOps)
-	fmt.Println("read ops:", readOpsFinal)
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
-	fmt.Println("write ops:", writeOpsFinal)
 	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
-	fmt.Println("ratio:", ratio)
-
 	assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
 
 }
