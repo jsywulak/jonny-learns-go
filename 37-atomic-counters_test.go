@@ -25,6 +25,6 @@ func TestAtomicCounters(t *testing.T) {
 	}
 
 	wg.Wait()
-	assert.Equal(t, uint64(50000), opsSafe)
-	assert.NotEqual(t, uint64(50000), opsDanger)
+	assert.Equal(t, uint64(50000), opsSafe, "should've hit 50k safe ops")
+	assert.NotEqual(t, uint64(50000), opsDanger, "shouldn't have hit 50k danger ops")
 }
