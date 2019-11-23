@@ -58,7 +58,7 @@ func TestMutexes(t *testing.T) {
 
 	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
 
-	assert.True(t, ratio < .15, "ratio should be around .1")
+	assert.True(t, ratio < .15 && ratio > .05, "ratio should be around .1")
 
 	mutex.Lock()
 	fmt.Println("state:", state)
