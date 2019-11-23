@@ -56,4 +56,8 @@ func TestMutexes(t *testing.T) {
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("writeOps:", writeOpsFinal)
 
+	mutex.Lock()
+	fmt.Println("state:", state)
+	mutex.Unlock()
+
 }
