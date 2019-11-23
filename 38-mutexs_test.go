@@ -56,7 +56,9 @@ func TestMutexes(t *testing.T) {
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("writeOps:", writeOpsFinal)
 
-	fmt.Println(float64(writeOpsFinal) / float64(readOpsFinal))
+	ratio := float64(writeOpsFinal) / float64(readOpsFinal)
+
+	assert.True(t, ratio < .2, "ratio should be around .1")
 
 	mutex.Lock()
 	fmt.Println("state:", state)
