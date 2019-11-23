@@ -16,7 +16,7 @@ func TestSorting(t *testing.T) {
 
 	sort.Strings(strs)
 	assert.Equal(t, []string{"a", "b", "c"}, strs)
-	ss = sort.StringsAreSorted(strs)
+	ss := sort.StringsAreSorted(strs)
 
 	fmt.Println("Strings:", strs)
 	fmt.Println("sorted?", ss)
