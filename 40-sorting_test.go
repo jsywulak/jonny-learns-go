@@ -19,8 +19,7 @@ func TestSorting(t *testing.T) {
 	sort.Ints(ints)
 	fmt.Println("ints:", ints)
 	ss := sort.StringsAreSorted(strs)
-	fmt.Println("sorted?", s)
+	fmt.Println("sorted?", ss)
 	is := sort.IntsAreSorted(ints)
-	fmt.Println("sorted?", s)
-
+	fmt.Println("sorted?", is)
 }
