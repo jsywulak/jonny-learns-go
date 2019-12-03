@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 	"testing"
 
@@ -27,6 +26,5 @@ func TestSortingFunctions(t *testing.T) {
 
 	fruits := []string{"peach", "banana", "kiwi"}
 	sort.Sort(byLength(fruits))
-	fmt.Println(fruits)
 	assert.Equal(t, []string{"kiwi", "peach", "banana"}, fruits)
 }
