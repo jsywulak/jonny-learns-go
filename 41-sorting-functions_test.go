@@ -16,6 +16,8 @@ func (s byLength) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }
 
+func (s byLength) Less(i, j int) {}
+
 func TestSortingFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
 }
