@@ -1,6 +1,7 @@
 package main
 
 import (
+	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -22,4 +23,8 @@ func (s byLength) Less(i, j int) bool {
 
 func TestSortingFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
+	fruits := []string{"peach", "banana", "kiwi"}
+	sort.Sort(byLength(fruits))
+
 }
