@@ -19,7 +19,7 @@ func TestStringFunctions(t *testing.T) {
 	assert.True(t, strings.HasSuffix("test", "st"))
 	assert.Equal(t, 1, strings.Index("test", "e"))
 	assert.Equal(t, "a-b", strings.Join([]string{"a", "b"}, "-"))
-	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
+	assert.Equal(t, "aaaaa", strings.Repeat("a", 5))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", -1))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", 1))
 	fmt.Println("Split:     ", strings.Split("a-b-c-d-e", "-"))
