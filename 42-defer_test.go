@@ -10,7 +10,7 @@ import (
 )
 
 func TestDefer(t *testing.T) {
-	WrapperFunctionToBeAbleToDefer(t)
+	WrapperFunctionToBeAbleToTestDefer(t)
 	dat, err := ioutil.ReadFile("/tmp/defer.txt")
 	if err != nil {
 		fmt.Println("you got bigger problems")
@@ -18,7 +18,7 @@ func TestDefer(t *testing.T) {
 	assert.Equal(t, "dataclosed", string(dat))
 }
 
-func WrapperFunctionToBeAbleToDefer(t *testing.T) {
+func WrapperFunctionToBeAbleToTestDefer(t *testing.T) {
 	f := createFile("/tmp/defer.txt")
 	defer closeFile(f)
 	writeFile(f)
