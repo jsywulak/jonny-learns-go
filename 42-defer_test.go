@@ -7,10 +7,10 @@ import (
 )
 
 func TestDefer(t *testing.T) {
-	Wrapper(t)
+	WrapperFunction(t)
 }
 
-func Wrapper(t *testing.T) {
+func WrapperFunction(t *testing.T) {
 	f := createFile("/tmp/defer.txt")
 	defer closeFile(f)
 	writeFile(f)
