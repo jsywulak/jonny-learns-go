@@ -22,7 +22,7 @@ func TestFor(t *testing.T) {
 	k := "original"
 	for {
 		break
-		k = "sequel"
+		// k = "sequel"
 	}
 
 	assert.Equal(t, "original", k)

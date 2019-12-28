@@ -2,12 +2,18 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"testing"
 )
 
 func TestDefer(t *testing.T) {
 	WrapperFunction(t)
+	dat, err := ioutil.ReadFile("/tmp/dat")
+	if err != nil {
+		fmt.Println("you got bigger problems")
+	}
+	fmt.Println(dat)
 }
 
 func WrapperFunction(t *testing.T) {
@@ -30,6 +36,7 @@ func writeFile(f *os.File) {
 
 func closeFile(f *os.File) {
 	err := f.Close()
+	fmt.Fprintln(f, "closed")
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
