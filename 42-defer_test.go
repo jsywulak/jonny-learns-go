@@ -35,8 +35,8 @@ func writeFile(f *os.File) {
 }
 
 func closeFile(f *os.File) {
-	err := f.Close()
 	fmt.Fprintln(f, "closed")
+	err := f.Close()
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
