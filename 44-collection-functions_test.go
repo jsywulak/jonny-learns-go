@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -8,6 +9,8 @@ import (
 
 func TestCollectionFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
+	var strs = []string{"peach", "apple", "pear", "plum"}
+	fmt.Println(Index(strs, "pear"))
 }
 
 func Index(vs []string, t string) int {
