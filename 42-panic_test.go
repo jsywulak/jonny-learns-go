@@ -10,7 +10,9 @@ import (
 func TestPanic(t *testing.T) {
 	assert.Equal(t, 2, 2)
 
-	// panic("a problem")
+	if false {
+		panic("a problem")
+	}
 
 	_, err := os.Create("/tmp/file")
 	if err != nil {
