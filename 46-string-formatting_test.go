@@ -15,8 +15,7 @@ type point struct {
 func TestStringFormatting(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	p := point{1, 2}
-	fmt.Printf("%v\n", p)
-	result := fmt.Sprintf("%v\n", p)
+	result := fmt.Sprintf("%v", p)
 	assert.Equal(t, "{1 2}\n", result)
 	fmt.Printf("%+v\n", p)
 	fmt.Printf("%#v\n", p)
