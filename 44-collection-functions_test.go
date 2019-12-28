@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 	"testing"
 
@@ -19,12 +18,7 @@ func TestCollectionFunctions(t *testing.T) {
 	assert.False(t, All(strs, func(v string) bool {
 		return strings.HasPrefix(v, "p")
 	}))
-	fmt.Println(Filter(strs, func(v string) bool {
-		return strings.Contains(v, "e")
-	}))
 	var expected = []string{"peach", "apple", "pear"}
-	fmt.Println(expected)
-
 	assert.Equal(t, expected, Filter(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
