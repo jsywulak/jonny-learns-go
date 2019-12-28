@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"testing"
 
@@ -11,7 +10,6 @@ import (
 func TestPanic(t *testing.T) {
 	defer func() {
 		if r := recover(); r != nil {
-			fmt.Println(r)
 			assert.Equal(t, r, "a problem")
 		}
 	}()
