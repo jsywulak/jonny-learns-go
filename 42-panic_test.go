@@ -26,3 +26,7 @@ func TestPanic(t *testing.T) {
 		panic(err)
 	}
 }
+
+func WrapperFunction() {
+
+}
