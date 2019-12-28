@@ -16,5 +16,6 @@ func TestStringFormatting(t *testing.T) {
 	p := point{1, 2}
 	fmt.Printf("%v\n", p)
 	fmt.Printf("%+v\n", p)
-	fmt.Printf("%#v\n", [])
+	fmt.Printf("%#v\n", p)
+
 }
