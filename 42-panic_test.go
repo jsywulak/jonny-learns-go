@@ -15,15 +15,16 @@ func TestPanic(t *testing.T) {
 }
 
 func WrapperFunction(t *testing.T) {
-	if false {
-		panic("a problem")
-	}
 
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("Recovered in f", r)
 		}
 	}()
+
+	if false {
+		panic("a problem")
+	}
 
 	_, err := os.Create("/tmp/file")
 	if err != nil {
