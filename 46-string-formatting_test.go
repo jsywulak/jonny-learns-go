@@ -32,7 +32,7 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("|%6d|%6d|\n", 12, 345)
 	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)
 	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")
-	fmt.Printf("%x\n", "hex this")
-	fmt.Printf("%x\n", "hex this")
+	s := fmt.Sprintf("a %s", "string")
+	fmt.Println(s)
 
 }
