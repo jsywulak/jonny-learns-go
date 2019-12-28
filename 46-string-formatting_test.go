@@ -26,7 +26,7 @@ func TestStringFormatting(t *testing.T) {
 	result = fmt.Sprintf("%d", 123)
 	assert.Equal(t, "123", result)
 
-	result = fmt.Sprintf("%b")
+	result = fmt.Sprintf("%b", 14)
 	assert.Equal(t, "1110", result)
 	fmt.Printf("%b\n", 14)
 	fmt.Printf("%c\n", 33)
