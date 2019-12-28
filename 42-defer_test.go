@@ -28,7 +28,6 @@ func writeFile(f *os.File) {
 }
 
 func closeFile(f *os.File) {
-	fmt.Println("closing")
 	err := f.Close()
 
 	if err != nil {
