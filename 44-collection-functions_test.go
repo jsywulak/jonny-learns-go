@@ -22,7 +22,8 @@ func TestCollectionFunctions(t *testing.T) {
 	fmt.Println(Filter(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
-	fmt.Println([]string{"peach", "apple", "pear"})
+	var expected = []string{"peach", "apple", "pear"}
+	fmt.Println(expected)
 }
 
 func Index(vs []string, t string) int {
