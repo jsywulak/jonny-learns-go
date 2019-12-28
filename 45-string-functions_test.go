@@ -22,7 +22,7 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", -1))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", 1))
-	fmt.Println("Split:     ")
+	fmt.Println("Split:     ", strings.Split("a-b-c-d-e", "-"))
 	fmt.Println("ToLower:   ")
 	fmt.Println("ToUpper:   ")
 
