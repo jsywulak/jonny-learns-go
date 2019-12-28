@@ -51,5 +51,6 @@ func TestStringFormatting(t *testing.T) {
 	assert.Equal(t, "|foo   |b     |", result)
 	result = fmt.Sprintf("a %s", "string")
 	assert.Equal(t, "a string", result)
+	// Not sure how you should test that you wrote to the error stream?
 	// fmt.Fprintf(os.Stderr, "an %s", "error")
 }
