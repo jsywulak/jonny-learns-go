@@ -24,6 +24,10 @@ func TestCollectionFunctions(t *testing.T) {
 	}))
 	var expected = []string{"peach", "apple", "pear"}
 	fmt.Println(expected)
+
+	assert.Equal(t, expected, Filter(strs, func(v string) bool {
+		return strings.Contains(v, "e")
+	}))
 }
 
 func Index(vs []string, t string) int {
