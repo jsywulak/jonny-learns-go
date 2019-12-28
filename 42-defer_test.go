@@ -10,6 +10,7 @@ import (
 
 func TestDefer(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
 }
 
 func createFile(p string) *os.File {
