@@ -21,8 +21,4 @@ func TestPanic(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-	WrapperFunction(t)
-}
-
-func WrapperFunction(t *testing.T) {
 }
