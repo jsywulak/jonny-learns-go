@@ -5,6 +5,8 @@ import (
 	"io/ioutil"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDefer(t *testing.T) {
@@ -13,8 +15,7 @@ func TestDefer(t *testing.T) {
 	if err != nil {
 		fmt.Println("you got bigger problems")
 	}
-	fmt.Println(string(dat))
-
+	assert.Equal(t, "dataclosed", string(dat))
 }
 
 func WrapperFunction(t *testing.T) {
