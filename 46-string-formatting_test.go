@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"strings"
 	"testing"
 
@@ -52,6 +51,5 @@ func TestStringFormatting(t *testing.T) {
 	assert.Equal(t, "|foo   |b     |", result)
 	result = fmt.Sprintf("a %s", "string")
 	assert.Equal(t, "a string", result)
-	fmt.Fprintf(os.Stderr, "an %s", "error")
-
+	// fmt.Fprintf(os.Stderr, "an %s", "error")
 }
