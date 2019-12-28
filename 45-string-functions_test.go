@@ -18,7 +18,7 @@ func TestStringFunctions(t *testing.T) {
 	assert.True(t, strings.HasPrefix("test", "te"))
 	assert.True(t, strings.HasSuffix("test", "st"))
 	assert.Equal(t, 1, strings.Index("test", "e"))
-	fmt.Println("Join:      ", strings.Join([]string{"a", "b"}, "-"))
+	assert.Equal(t, "a-b", strings.Join([]string{"a", "b"}, "-"))
 	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", -1))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", 1))
