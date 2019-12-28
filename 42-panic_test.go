@@ -7,5 +7,5 @@ import (
 )
 
 func TestPanic(t *testing.T) {
-	assert.Equal(t, 1, 1)
+	assert.Equal(t, 2, 2)
 }
