@@ -10,6 +10,9 @@ import (
 
 func TestDefer(t *testing.T) {
 	assert.Equal(t, 1, 1)
+	f := createFile("/tmp/defer.txt")
+	defer closeFile(f)
+	writeFile(f)
 
 }
 
