@@ -17,5 +17,5 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("%v\n", p)
 	fmt.Printf("%+v\n", p)
 	fmt.Printf("%#v\n", p)
-
+	fmt.Printf("%T\n", p)
 }
