@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 
@@ -22,6 +23,8 @@ func TestCollectionFunctions(t *testing.T) {
 	assert.Equal(t, expected, Filter(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
+
+	fmt.Println(Map(strs, strings.ToUpper))
 }
 
 func Index(vs []string, t string) int {
