@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -42,7 +43,7 @@ func TestStringFormatting(t *testing.T) {
 	result = fmt.Sprintf("%x", "hex this")
 	assert.Equal(t, "6865782074686973", result)
 	result = fmt.Sprintf("%p", &p)
-	assert.True(t, strings.HasPrefix(result, "0x")))
+	assert.True(t, strings.HasPrefix(result, "0x"))
 	fmt.Printf("|%6d|%6d|", 12, 345)
 	fmt.Printf("|%6.2f|%6.2f|", 1.2, 3.45)
 	fmt.Printf("|%-6s|%-6s|", "foo", "b")
