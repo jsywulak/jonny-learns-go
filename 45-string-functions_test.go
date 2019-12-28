@@ -19,7 +19,7 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("HasSuffix: ", strings.HasSuffix("test", "st"))
 	fmt.Println("Index:     ", strings.Index("test", "e"))
 	fmt.Println("Join:      ", strings.Join([]string{"a", "b"}, "-"))
-	fmt.Println("Repeat:    ")
+	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
 	fmt.Println("Replace:   ")
 	fmt.Println("Replace:   ")
 	fmt.Println("Split:     ")
