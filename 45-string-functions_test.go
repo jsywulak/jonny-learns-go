@@ -22,7 +22,8 @@ func TestStringFunctions(t *testing.T) {
 	assert.Equal(t, "aaaaa", strings.Repeat("a", 5))
 	assert.Equal(t, "f00", strings.Replace("foo", "o", "0", -1))
 	assert.Equal(t, "f0o", strings.Replace("foo", "o", "0", 1))
-	fmt.Println("Split:     ", strings.Split("a-b-c-d-e", "-"))
+	assert.Equal(t, []string{"a", "b", "c", "d", "e"}, strings.Split("a-b-c-d-e", "-"))
+	fmt.Println("Split:     ")
 	fmt.Println("ToLower:   ", strings.ToLower("TEST"))
 	fmt.Println("ToUpper:   ", strings.ToUpper("test"))
 
