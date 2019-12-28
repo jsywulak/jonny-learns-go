@@ -22,7 +22,7 @@ func WrapperFunction(t *testing.T) {
 		}
 	}()
 
-	if false {
+	if true {
 		panic("a problem")
 	}
 
