@@ -43,5 +43,5 @@ func All(vs []string, f func(string) bool) bool {
 
 func Filter(vs []string, f func(string) bool) []string {
 	vsf := make([]string, 0)
-	return ""
+	return vsf
 }
