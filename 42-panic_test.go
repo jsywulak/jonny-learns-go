@@ -4,13 +4,9 @@ import (
 	"fmt"
 	"os"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestPanic(t *testing.T) {
-	assert.Equal(t, 2, 2)
-
 	WrapperFunction(t)
 }
 
