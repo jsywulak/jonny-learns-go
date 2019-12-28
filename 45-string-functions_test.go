@@ -10,9 +10,11 @@ import (
 
 var p = fmt.Println
 
+var ae = assert.Equal
+
 func TestStringFunctions(t *testing.T) {
 	assert.True(t, strings.Contains("test", "es"))
-	assert.Equal(t, 2, strings.Count("test", "t"))
+	ae(t, 2, strings.Count("test", "t"))
 	assert.True(t, strings.HasPrefix("test", "te"))
 	assert.True(t, strings.HasSuffix("test", "st"))
 	assert.Equal(t, 1, strings.Index("test", "e"))
