@@ -25,6 +25,8 @@ func TestCollectionFunctions(t *testing.T) {
 	}))
 
 	fmt.Println(Map(strs, strings.ToUpper))
+	expected = []string{"PEACH", "APPLE", "PEAR", "PLUM"}
+
 }
 
 func Index(vs []string, t string) int {
