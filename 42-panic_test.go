@@ -11,6 +11,10 @@ import (
 func TestPanic(t *testing.T) {
 	assert.Equal(t, 2, 2)
 
+	WrapperFunction(t)
+}
+
+func WrapperFunction(t *testing.T) {
 	if false {
 		panic("a problem")
 	}
@@ -25,8 +29,4 @@ func TestPanic(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-}
-
-func WrapperFunction(t *testing.T) {
-
 }
