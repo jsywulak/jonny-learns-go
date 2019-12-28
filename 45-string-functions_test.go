@@ -21,7 +21,7 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("Join:      ", strings.Join([]string{"a", "b"}, "-"))
 	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", -1))
-	fmt.Println("Replace:   ")
+	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", 1))
 	fmt.Println("Split:     ")
 	fmt.Println("ToLower:   ")
 	fmt.Println("ToUpper:   ")
