@@ -31,3 +31,12 @@ func Any(vs []string, f func(string) bool) bool {
 	}
 	return false
 }
+
+func All(vs []string, f func(string) bool) bool {
+	for _, v := range vs {
+		if !f(v) {
+			return false
+		}
+	}
+	return true
+}
