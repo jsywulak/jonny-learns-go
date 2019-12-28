@@ -27,6 +27,6 @@ func TestPanic(t *testing.T) {
 	}
 }
 
-func WrapperFunction() {
+func WrapperFunction(t *testing.T) {
 
 }
