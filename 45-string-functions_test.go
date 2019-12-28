@@ -1,14 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
-
-var p = fmt.Println
 
 var ae = assert.Equal
 var at = assert.True
