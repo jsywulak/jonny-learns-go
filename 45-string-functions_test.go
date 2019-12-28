@@ -11,8 +11,6 @@ import (
 var p = fmt.Println
 
 func TestStringFunctions(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	assert.True(t, strings.Contains("test", "es"))
 	assert.Equal(t, 2, strings.Count("test", "t"))
 	assert.True(t, strings.HasPrefix("test", "te"))
@@ -25,5 +23,4 @@ func TestStringFunctions(t *testing.T) {
 	assert.Equal(t, []string{"a", "b", "c", "d", "e"}, strings.Split("a-b-c-d-e", "-"))
 	assert.Equal(t, "test", strings.ToLower("TEST"))
 	assert.Equal(t, "TEST", strings.ToUpper("test"))
-
 }
