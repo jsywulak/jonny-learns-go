@@ -24,6 +24,6 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("Replace:   ", strings.Replace("foo", "o", "0", 1))
 	fmt.Println("Split:     ", strings.Split("a-b-c-d-e", "-"))
 	fmt.Println("ToLower:   ", strings.ToLower("TEST"))
-	fmt.Println("ToUpper:   ")
+	fmt.Println("ToUpper:   ", strings.ToUpper("test"))
 
 }
