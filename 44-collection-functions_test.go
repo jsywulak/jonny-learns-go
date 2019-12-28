@@ -18,6 +18,7 @@ func TestCollectionFunctions(t *testing.T) {
 	assert.False(t, All(strs, func(v string) bool {
 		return strings.HasPrefix(v, "p")
 	}))
+
 }
 
 func Index(vs []string, t string) int {
