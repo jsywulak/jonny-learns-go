@@ -4,15 +4,17 @@ import (
 	"fmt"
 	"os"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestDefer(t *testing.T) {
-	assert.Equal(t, 1, 1)
+	Wrapper(t)
+}
+
+func Wrapper(t *testing.T) {
 	f := createFile("/tmp/defer.txt")
 	defer closeFile(f)
 	writeFile(f)
+
 }
 
 func createFile(p string) *os.File {
