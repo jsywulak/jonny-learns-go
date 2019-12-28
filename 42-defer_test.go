@@ -20,3 +20,8 @@ func createFile(p string) *os.File {
 	}
 	return f
 }
+
+func writeFile(f *os.File) {
+	fmt.Println("writing")
+	fmt.Fprintln(f, "data")
+}
