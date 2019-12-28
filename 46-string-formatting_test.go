@@ -50,8 +50,8 @@ func TestStringFormatting(t *testing.T) {
 	assert.Equal(t, "|  1.20|  3.45|", result)
 	result = fmt.Sprintf("|%-6s|%-6s|", "foo", "b")
 	assert.Equal(t, "|foo   |b     |", result)
-	s := fmt.Sprintf("a %s", "string")
-	fmt.Println(s)
+	result = fmt.Sprintf("a %s", "string")
+	assert.Equal(t, "a string", result)
 	fmt.Fprintf(os.Stderr, "an %s", "error")
 
 }
