@@ -27,6 +27,6 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("%E\n", 123400000.0)
 	fmt.Printf("%s\n", "\"string\"")
 	fmt.Printf("%q\n", "\"string\"")
-	fmt.Printf("%x\n", 78.9)
+	fmt.Printf("%x\n", "hex this")
 
 }
