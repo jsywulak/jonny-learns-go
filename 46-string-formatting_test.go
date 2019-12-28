@@ -16,7 +16,7 @@ func TestStringFormatting(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	p := point{1, 2}
 	result := fmt.Sprintf("%v", p)
-	assert.Equal(t, "{1 2}\n", result)
+	assert.Equal(t, "{1 2}", result)
 	fmt.Printf("%+v\n", p)
 	fmt.Printf("%#v\n", p)
 	fmt.Printf("%T\n", p)
