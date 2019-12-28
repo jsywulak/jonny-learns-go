@@ -16,5 +16,11 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("Contains:  ", strings.Contains("test", "es"))
 	fmt.Println("Count:     ", strings.Count("test", "t"))
 	fmt.Println("HasPrefix: ", strings.HasPrefix("test", "te"))
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
 
 }
