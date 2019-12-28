@@ -20,4 +20,6 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("%T\n", p)
 	fmt.Printf("%d\n", 123)
 	fmt.Printf("%b\n", 14)
+	fmt.Printf("%c\n", 33)
+	fmt.Printf("%x\n", 456)
 }
