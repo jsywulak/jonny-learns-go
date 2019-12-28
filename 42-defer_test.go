@@ -13,7 +13,6 @@ func TestDefer(t *testing.T) {
 	f := createFile("/tmp/defer.txt")
 	defer closeFile(f)
 	writeFile(f)
-
 }
 
 func createFile(p string) *os.File {
