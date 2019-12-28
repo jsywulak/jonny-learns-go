@@ -24,6 +24,8 @@ func TestStringFormatting(t *testing.T) {
 	result = fmt.Sprintf("%T", p)
 	assert.Equal(t, "main.point", result)
 	fmt.Printf("%d\n", 123)
+	result = fmt.Sprintf("%d", 123)
+	assert.Equal(t, "123", result)
 	fmt.Printf("%b\n", 14)
 	fmt.Printf("%c\n", 33)
 	fmt.Printf("%x\n", 456)
