@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 	"testing"
 
@@ -16,7 +15,7 @@ func TestCollectionFunctions(t *testing.T) {
 	assert.True(t, Any(strs, func(v string) bool {
 		return strings.HasPrefix(v, "p")
 	}))
-	fmt.Println(All(strs, func(v string) bool {
+	assert.False(t, All(strs, func(v string) bool {
 		return strings.HasPrefix(v, "p")
 	}))
 }
