@@ -16,7 +16,6 @@ func TestDefer(t *testing.T) {
 }
 
 func createFile(p string) *os.File {
-	fmt.Println("creating")
 	f, err := os.Create(p)
 	if err != nil {
 		panic(err)
@@ -25,7 +24,6 @@ func createFile(p string) *os.File {
 }
 
 func writeFile(f *os.File) {
-	fmt.Println("writing")
 	fmt.Fprintln(f, "data")
 }
 
