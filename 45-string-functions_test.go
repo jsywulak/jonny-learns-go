@@ -14,10 +14,10 @@ var ae = assert.Equal
 var at = assert.True
 
 func TestStringFunctions(t *testing.T) {
-	assert.True(t, strings.Contains("test", "es"))
+	at(t, strings.Contains("test", "es"))
 	ae(t, 2, strings.Count("test", "t"))
-	assert.True(t, strings.HasPrefix("test", "te"))
-	assert.True(t, strings.HasSuffix("test", "st"))
+	at(t, strings.HasPrefix("test", "te"))
+	at(t, strings.HasSuffix("test", "st"))
 	ae(t, 1, strings.Index("test", "e"))
 	ae(t, "a-b", strings.Join([]string{"a", "b"}, "-"))
 	ae(t, "aaaaa", strings.Repeat("a", 5))
