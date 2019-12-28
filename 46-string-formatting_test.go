@@ -22,4 +22,5 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("%b\n", 14)
 	fmt.Printf("%c\n", 33)
 	fmt.Printf("%x\n", 456)
+	fmt.Printf("%f\n", 78.9)
 }
