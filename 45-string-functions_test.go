@@ -14,7 +14,8 @@ func TestStringFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	assert.True(t, strings.Contains("test", "es"))
-	fmt.Println("Count:     ", strings.Count("test", "t"))
+	fmt.Println("Count:     ")
+	assert.Equal(t, 2, strings.Count("test", "t"))
 	fmt.Println("HasPrefix: ", strings.HasPrefix("test", "te"))
 	fmt.Println("HasSuffix: ", strings.HasSuffix("test", "st"))
 	fmt.Println("Index:     ", strings.Index("test", "e"))
