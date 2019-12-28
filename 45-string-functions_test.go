@@ -18,7 +18,7 @@ func TestStringFunctions(t *testing.T) {
 	fmt.Println("HasPrefix: ", strings.HasPrefix("test", "te"))
 	fmt.Println("HasSuffix: ", strings.HasSuffix("test", "st"))
 	fmt.Println("Index:     ", strings.Index("test", "e"))
-	fmt.Println("Join:      ")
+	fmt.Println("Join:      ", strings.Join([]string{"a", "b"}, "-"))
 	fmt.Println("Repeat:    ")
 	fmt.Println("Replace:   ")
 	fmt.Println("Replace:   ")
