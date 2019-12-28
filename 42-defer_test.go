@@ -9,7 +9,7 @@ import (
 
 func TestDefer(t *testing.T) {
 	WrapperFunction(t)
-	dat, err := ioutil.ReadFile("/tmp/dat")
+	dat, err := ioutil.ReadFile("/tmp/defer.txt")
 	if err != nil {
 		fmt.Println("you got bigger problems")
 	}
