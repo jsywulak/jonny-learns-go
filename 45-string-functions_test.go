@@ -13,6 +13,6 @@ var p = fmt.Println
 func TestStringFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
-	fmt.Println("Contains:", strings.Contains("test", "es"))
+	fmt.Println("Contains:  ", strings.Contains("test", "es"))
 
 }
