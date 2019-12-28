@@ -14,10 +14,10 @@ func TestStringFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	assert.True(t, strings.Contains("test", "es"))
-	fmt.Println("Count:     ")
 	assert.Equal(t, 2, strings.Count("test", "t"))
-	fmt.Println("HasPrefix: ", strings.HasPrefix("test", "te"))
-	fmt.Println("HasSuffix: ", strings.HasSuffix("test", "st"))
+	assert.True(t, strings.HasPrefix("test", "te"))
+	assert.True(t, strings.HasSuffix("test", "st"))
+	fmt.Println("HasSuffix: ")
 	fmt.Println("Index:     ", strings.Index("test", "e"))
 	fmt.Println("Join:      ", strings.Join([]string{"a", "b"}, "-"))
 	fmt.Println("Repeat:    ", strings.Repeat("a", 5))
