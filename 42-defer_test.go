@@ -13,7 +13,7 @@ func TestDefer(t *testing.T) {
 	if err != nil {
 		fmt.Println("you got bigger problems")
 	}
-	fmt.Println(dat)
+	fmt.Println(string(dat))
 }
 
 func WrapperFunction(t *testing.T) {
