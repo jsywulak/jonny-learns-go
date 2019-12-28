@@ -7,11 +7,6 @@ import (
 )
 
 func TestPanic(t *testing.T) {
-	WrapperFunction(t)
-}
-
-func WrapperFunction(t *testing.T) {
-
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("Recovered in f", r)
@@ -26,4 +21,8 @@ func WrapperFunction(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
+	WrapperFunction(t)
+}
+
+func WrapperFunction(t *testing.T) {
 }
