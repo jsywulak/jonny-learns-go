@@ -8,7 +8,6 @@ import (
 )
 
 func TestCollectionFunctions(t *testing.T) {
-	assert.Equal(t, 1, 1)
 	var strs = []string{"peach", "apple", "pear", "plum"}
 	assert.Equal(t, 2, Index(strs, "pear"))
 	assert.False(t, Include(strs, "grape"))
