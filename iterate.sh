@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if go test > output.txt 2>&1
+if go vet > output.txt 2>&1 && go test > output.txt 2>&1 
 then
     cat output.txt
     echo "tests passed, committing"
