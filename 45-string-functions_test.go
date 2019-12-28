@@ -11,6 +11,7 @@ import (
 var p = fmt.Println
 
 var ae = assert.Equal
+var at = assert.True
 
 func TestStringFunctions(t *testing.T) {
 	assert.True(t, strings.Contains("test", "es"))
