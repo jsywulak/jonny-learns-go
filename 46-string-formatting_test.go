@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -34,5 +35,6 @@ func TestStringFormatting(t *testing.T) {
 	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")
 	s := fmt.Sprintf("a %s", "string")
 	fmt.Println(s)
+	fmt.Fprintf(os.Stderr, "an %s\n", "error")
 
 }
