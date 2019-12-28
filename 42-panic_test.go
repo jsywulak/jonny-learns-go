@@ -20,6 +20,7 @@ func TestPanic(t *testing.T) {
 			fmt.Println("Recovered in f", r)
 		}
 	}()
+
 	_, err := os.Create("/tmp/file")
 	if err != nil {
 		panic(err)
