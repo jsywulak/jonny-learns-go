@@ -20,7 +20,7 @@ func TestRateLimits(t *testing.T) {
 	for range requests {
 		<-limiter
 		now := time.Now()
-		assert.WithinDuration(t, lastTime, now, 30*time.Millisecond)
+		assert.WithinDuration(t, lastTime, now, 35*time.Millisecond)
 		lastTime = now
 	}
 
