@@ -11,8 +11,10 @@ func TestCollectionFunctions(t *testing.T) {
 	assert.Equal(t, 1, 1)
 	var strs = []string{"peach", "apple", "pear", "plum"}
 	assert.Equal(t, 2, Index(strs, "pear"))
-	fmt.Println(Include(strs, "grape"))
 	assert.False(t, Include(strs, "grape"))
+	fmt.Println(Any(strs, func (v string) bool){
+		return strings.HasPrefix(v, "p")
+	})
 }
 
 func Index(vs []string, t string) int {
