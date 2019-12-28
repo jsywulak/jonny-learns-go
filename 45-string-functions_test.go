@@ -2,6 +2,7 @@ package main
 
 import (
 	"strings"
+	s "strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -11,7 +12,7 @@ var ae = assert.Equal
 var at = assert.True
 
 func TestStringFunctions(t *testing.T) {
-	at(t, strings.Contains("test", "es"))
+	at(t, s.Contains("test", "es"))
 	ae(t, 2, strings.Count("test", "t"))
 	at(t, strings.HasPrefix("test", "te"))
 	at(t, strings.HasSuffix("test", "st"))
