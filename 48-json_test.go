@@ -74,9 +74,4 @@ func TestJson(t *testing.T) {
 	fmt.Println(res)
 	// fmt.Println(res.Fruits[0])
 
-	str2 := `{"page": 1, "fruits": ["apple", "peach"]}`
-	res2 := response2{}
-	json.Unmarshal([]byte(str2), &res2)
-	fmt.Println(res2)
-
 }
