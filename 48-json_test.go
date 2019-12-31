@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 	"testing"
 
@@ -74,8 +73,6 @@ func TestJson(t *testing.T) {
 	str := `{"page": 1, "fruits": ["apple", "peach"]}`
 	res := response2{}
 	json.Unmarshal([]byte(str), &res)
-	fmt.Println(res)
-	fmt.Println(res.Fruits[0])
 	assert.Equal(t, "apple", res.Fruits[0])
 
 	enc := json.NewEncoder(os.Stdout)
