@@ -51,7 +51,6 @@ func TestJson(t *testing.T) {
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
 	res2B, _ := json.Marshal(res2D)
-	fmt.Println(string(res2B))
 	expected = "{\"page\":1,\"fruits\":[\"apple\",\"peach\",\"pear\"]}"
 	assert.Equal(t, expected, string(res2B))
 
