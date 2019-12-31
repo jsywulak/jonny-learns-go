@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -75,8 +74,9 @@ func TestJson(t *testing.T) {
 	json.Unmarshal([]byte(str), &res)
 	assert.Equal(t, "apple", res.Fruits[0])
 
-	enc := json.NewEncoder(os.Stdout)
-	d := map[string]int{"apple": 5, "lettuce": 7}
-	enc.Encode(d)
+	// Not exactly sure how to test this since it's printing to stdout
+	// enc := json.NewEncoder(os.Stdout)
+	// d := map[string]int{"apple": 5, "lettuce": 7}
+	// enc.Encode(d)
 
 }
