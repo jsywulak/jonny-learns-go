@@ -38,7 +38,6 @@ func TestJson(t *testing.T) {
 
 	mapD := map[string]int{"apple": 5, "lettuce": 7}
 	mapB, _ := json.Marshal(mapD)
-	fmt.Println(string(mapB))
 	assert.Equal(t, "{\"apple\":5,\"lettuce\":7}", string(mapB))
 
 	res1D := &response1{
