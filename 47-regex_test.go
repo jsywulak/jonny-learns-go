@@ -18,8 +18,8 @@ func TestRegex(t *testing.T) {
 	assert.Equal(t, "peach", r.FindString("peach punch"))
 	assert.Equal(t, []int{0, 5}, r.FindStringIndex("peach punch"))
 	assert.Equal(t, []string{"peach", "ea"}, r.FindStringSubmatch("peach punch"))
-
 	assert.Equal(t, []int{0, 5, 1, 3}, r.FindStringSubmatchIndex("peach punch"))
+
 	fmt.Println(r.FindAllString("peach punch pinch", -1))
 	fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1))
 	fmt.Println(r.FindAllString("peach punch pinch", 2))
