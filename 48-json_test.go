@@ -60,8 +60,8 @@ func TestJson(t *testing.T) {
 		panic(err)
 	}
 	fmt.Println(dat)
-	exp = map[string]interface{"num":6.13, "strs":[]string{"a", "b"}}
-	fmt.Println(exp)
+	// exp = map[string]interface{"num":6.13, "strs":[]string{"a", "b"}}
+	// fmt.Println(exp)
 	// assert.Equal(t, expected, string(dat))
 	num := dat["num"].(float64)
 	fmt.Println(num)
