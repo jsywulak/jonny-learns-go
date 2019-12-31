@@ -43,16 +43,17 @@ func TestJson(t *testing.T) {
 	res1D := &response1{
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
-
 	res1B, _ := json.Marshal(res1D)
-	// fmt.Println(string(res1B))
 	expected := "{\"Page\":1,\"Fruits\":[\"apple\",\"peach\",\"pear\"]}"
 	assert.Equal(t, expected, string(res1B))
+
 	res2D := &response2{
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
 	res2B, _ := json.Marshal(res2D)
 	fmt.Println(string(res2B))
+	expected = "{\"page\":1,\"fruits\":[\"apple\",\"peach\",\"pear\"]}"
+	assert.Equal(t, expected, string(res2B))
 
 	byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
 
