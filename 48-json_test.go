@@ -53,4 +53,13 @@ func TestJson(t *testing.T) {
 	res2B, _ := json.Marshal(res2D)
 	fmt.Println(string(res2B))
 
+	byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
+
+	var dat map[string]interface{}
+
+	if err := json.Unmarshal(byt, &dat); err != nil {
+		panic(err)
+	}
+	fmt.Println(dat)
+
 }
