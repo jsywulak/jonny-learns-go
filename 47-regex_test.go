@@ -13,7 +13,7 @@ func TestRegex(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
-	fmt.Println(match)
+	assert.True(t, match)
 
 	r, _ := regexp.Compile("p([a-z]+)ch")
 	assert.True(t, r.MatchString("peach"))
