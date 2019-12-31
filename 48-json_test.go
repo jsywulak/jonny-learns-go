@@ -60,7 +60,8 @@ func TestJson(t *testing.T) {
 		panic(err)
 	}
 	fmt.Println(dat)
-	var exp map[string]interface{}
+	exp := make(map[string]interface{})
+
 	// exp["num"]=6.13
 	// exp["strs"]=[]string{"a", "b"}}
 	fmt.Println(exp)
