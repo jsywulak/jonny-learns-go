@@ -39,4 +39,12 @@ func TestJson(t *testing.T) {
 	mapD := map[string]int{"apple": 5, "lettuce": 7}
 	mapB, _ := json.Marshal(mapD)
 	fmt.Println(string(mapB))
+
+	res1D := &response1{
+		Page: 1,
+		Fruits: []string{"apple", "peach", "pear"}
+	}
+
+	res1B, _ := json.Marshal(res1D)
+	fmt.Println(string(res1B))
 }
