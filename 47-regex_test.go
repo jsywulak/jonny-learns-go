@@ -25,4 +25,6 @@ func TestRegex(t *testing.T) {
 	fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1))
 	fmt.Println(r.FindAllString("peach punch pinch", 2))
 	fmt.Println(r.Match([]byte("peach")))
+	r = regexp.MustCompile("p([a-z]+)ch")
+	fmt.Println(r)
 }
