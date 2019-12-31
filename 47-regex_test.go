@@ -22,6 +22,7 @@ func TestRegex(t *testing.T) {
 	assert.Equal(t, []string{"peach", "punch", "pinch"}, r.FindAllString("peach punch pinch", -1))
 	assert.Equal(t, [][]int{{0, 5, 1, 3}, {6, 11, 7, 9}, {12, 17, 13, 15}}, r.FindAllStringSubmatchIndex("peach punch pinch", -1))
 
+	assert.Equal(t, []string{"peach", "punch"}, r.FindAllString("peach punch pinch", 2))
 	fmt.Println(r.FindAllString("peach punch pinch", 2))
 	fmt.Println(r.Match([]byte("peach")))
 	r = regexp.MustCompile("p([a-z]+)ch")
