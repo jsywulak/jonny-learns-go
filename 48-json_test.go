@@ -1,6 +1,8 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -17,4 +19,7 @@ type response2 struct {
 
 func TestJson(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
+	bolB, _ := json.Marshal(true)
+	fmt.Println(string(bolB))
 }
