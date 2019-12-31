@@ -10,16 +10,12 @@ import (
 )
 
 func TestRegex(t *testing.T) {
-	assert.Equal(t, 1, 1)
-
 	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
 	assert.True(t, match)
 
 	r, _ := regexp.Compile("p([a-z]+)ch")
 	assert.True(t, r.MatchString("peach"))
-
 	assert.Equal(t, "peach", r.FindString("peach punch"))
-
 	assert.Equal(t, []int{0, 5}, r.FindStringIndex("peach punch"))
 	assert.Equal(t, []string{"peach", "ea"}, r.FindStringSubmatch("peach punch"))
 
