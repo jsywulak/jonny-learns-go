@@ -16,4 +16,6 @@ func TestRegex(t *testing.T) {
 
 	r, _ := regexp.Compile("p([a-z]+)ch")
 	fmt.Println(r.MatchString("peach"))
+
+	fmt.Println(r.FindString("peach punch"))
 }
