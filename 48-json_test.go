@@ -69,7 +69,6 @@ func TestJson(t *testing.T) {
 
 	strs := dat["strs"].([]interface{})
 	str1 := strs[0].(string)
-	fmt.Println(str1)
 	assert.Equal(t, "a", str1)
 
 	str := `{"page": 1, "fruits": ["apple", "peach"]}`
