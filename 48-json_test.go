@@ -41,9 +41,8 @@ func TestJson(t *testing.T) {
 	fmt.Println(string(mapB))
 
 	res1D := &response1{
-		Page: 1,
-		Fruits: []string{"apple", "peach", "pear"}
-	}
+		Page:   1,
+		Fruits: []string{"apple", "peach", "pear"}}
 
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B))
