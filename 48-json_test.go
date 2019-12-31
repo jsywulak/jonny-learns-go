@@ -66,6 +66,7 @@ func TestJson(t *testing.T) {
 
 	num := dat["num"].(float64)
 	fmt.Println(num)
+	assert.Equal(t, 6.13, num)
 
 	strs := dat["strs"].([]interface{})
 	str1 := strs[0].(string)
