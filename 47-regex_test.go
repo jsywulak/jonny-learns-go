@@ -27,4 +27,5 @@ func TestRegex(t *testing.T) {
 	fmt.Println(r.Match([]byte("peach")))
 	r = regexp.MustCompile("p([a-z]+)ch")
 	fmt.Println(r)
+	fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
 }
