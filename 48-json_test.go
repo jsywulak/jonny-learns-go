@@ -14,7 +14,7 @@ type response1 struct {
 }
 type response2 struct {
 	Page   int      `json:"page"`
-	Fruits []string `json:"fruit"`
+	Fruits []string `json:"fruits"`
 }
 
 func TestJson(t *testing.T) {
