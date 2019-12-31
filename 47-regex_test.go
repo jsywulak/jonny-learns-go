@@ -29,5 +29,5 @@ func TestRegex(t *testing.T) {
 	assert.Equal(t, "a <fruit>", r.ReplaceAllString("a peach", "<fruit>"))
 	in := []byte("a peach")
 	out := r.ReplaceAllFunc(in, bytes.ToUpper)
-	fmt.Println(string(out))
+	assert.Equal(t, "a PEACH", string(out))
 }
