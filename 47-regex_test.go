@@ -31,4 +31,5 @@ func TestRegex(t *testing.T) {
 	fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
 	in := []byte("a peach")
 	out := r.ReplaceAllFunc(in, bytes.ToUpper)
+	fmt.Println(string(out))
 }
