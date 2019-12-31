@@ -59,13 +59,11 @@ func TestJson(t *testing.T) {
 	if err := json.Unmarshal(byt, &dat); err != nil {
 		panic(err)
 	}
-	fmt.Println(dat)
 	exp := make(map[string]interface{})
-
 	exp["num"] = 6.13
 	exp["strs"] = []interface{}{"a", "b"}
-	fmt.Println(exp)
 	assert.Equal(t, exp, dat)
+
 	num := dat["num"].(float64)
 	fmt.Println(num)
 
