@@ -25,4 +25,7 @@ func TestJson(t *testing.T) {
 
 	intB, _ := json.Marshal(1)
 	fmt.Println(string(intB))
+
+	fltB, _ := json.Marshal(1.23)
+	fmt.Println(string(fltB))
 }
