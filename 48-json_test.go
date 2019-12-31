@@ -55,13 +55,14 @@ func TestJson(t *testing.T) {
 	assert.Equal(t, expected, string(res2B))
 
 	byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
-
 	var dat map[string]interface{}
-
 	if err := json.Unmarshal(byt, &dat); err != nil {
 		panic(err)
 	}
 	fmt.Println(dat)
+	exp = map[string]interface{"num":6.13, "strs":[]string{"a", "b"}}
+	fmt.Println(exp)
+	// assert.Equal(t, expected, string(dat))
 	num := dat["num"].(float64)
 	fmt.Println(num)
 
