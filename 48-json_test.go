@@ -27,11 +27,10 @@ func TestJson(t *testing.T) {
 	assert.Equal(t, "1", string(intB))
 
 	fltB, _ := json.Marshal(1.23)
-	fmt.Println(string(fltB))
 	assert.Equal(t, "1.23", string(fltB))
 
 	strB, _ := json.Marshal("gopher")
-	fmt.Println(string(strB))
+	assert.Equal(t, "\"gopher\"", string(strB))
 
 	slcD := []string{"apple", "peach", "pear"}
 	slcB, _ := json.Marshal(slcD)
