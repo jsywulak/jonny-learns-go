@@ -72,6 +72,6 @@ func TestJson(t *testing.T) {
 	res := response2{}
 	json.Unmarshal([]byte(str), &res)
 	fmt.Println(res)
-	// fmt.Println(res.Fruits[0])
+	fmt.Println(res.Fruits[0])
 
 }
