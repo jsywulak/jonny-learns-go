@@ -32,4 +32,7 @@ func TestJson(t *testing.T) {
 	strB, _ := json.Marshal("gopher")
 	fmt.Println(string(strB))
 
+	slcD := []string{"apple", "peach", "pear"}
+	slcB, _ := json.Marshal(slcD)
+	fmt.Println(string(slcB))
 }
