@@ -15,6 +15,7 @@ then
     git push -q &
 else
     mv output.txt last_failure.txt
+    cat last_failure.txt
     echo "tests failed, reverting"
     git checkout .
 fi
