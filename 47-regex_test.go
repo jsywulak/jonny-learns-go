@@ -23,4 +23,5 @@ func TestRegex(t *testing.T) {
 	fmt.Println(r.FindStringSubmatchIndex("peach punch"))
 	fmt.Println(r.FindAllString("peach punch pinch", -1))
 	fmt.Println(r.FindAllStringSubmatchIndex("peach punch pinch", -1))
+	fmt.Println(r.FindAllString("peach punch pinch", 2))
 }
