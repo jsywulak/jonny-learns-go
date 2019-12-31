@@ -26,7 +26,7 @@ func TestRegex(t *testing.T) {
 	assert.True(t, r.Match([]byte("peach")))
 	r = regexp.MustCompile("p([a-z]+)ch")
 	fmt.Println(r)
-	fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
+	assert.Equal(t, "a <fruit>", r.ReplaceAllString("a peach", "<fruit>"))
 	in := []byte("a peach")
 	out := r.ReplaceAllFunc(in, bytes.ToUpper)
 	fmt.Println(string(out))
