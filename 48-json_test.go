@@ -23,6 +23,7 @@ func TestJson(t *testing.T) {
 
 	bolB, _ := json.Marshal(true)
 	fmt.Println(string(bolB))
+	assert.Equal(t, "true", string(bolB))
 
 	intB, _ := json.Marshal(1)
 	fmt.Println(string(intB))
