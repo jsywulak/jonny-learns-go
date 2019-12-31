@@ -61,5 +61,7 @@ func TestJson(t *testing.T) {
 		panic(err)
 	}
 	fmt.Println(dat)
+	num := dat["num"].(float64)
+	fmt.Println(num)
 
 }
