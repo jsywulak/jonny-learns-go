@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# need to move everything to a tempdir to prevent mixing up saves
 if go vet > output.txt 2>&1 && go test >> output.txt 2>&1 
 then
     cat output.txt
