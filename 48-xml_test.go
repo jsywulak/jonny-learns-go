@@ -34,6 +34,7 @@ func TestXml(t *testing.T) {
  </plant>`
 	assert.Equal(t, expected, actual)
 	actual = (xml.Header + string(out))
+	fmt.Println(actual)
 
 	var p Plant
 	if err := xml.Unmarshal(out, &p); err != nil {
