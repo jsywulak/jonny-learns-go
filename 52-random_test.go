@@ -16,6 +16,6 @@ func TestRandom(t *testing.T) {
 	fmt.Println(rand.Intn(100), rand.Intn(100))
 
 	fmt.Println(rand.Float64())
-	fmt.Println(rand.Float64() * 5)
+	fmt.Println((rand.Float64() * 5) + 5)
 
 }
