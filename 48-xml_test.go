@@ -21,4 +21,7 @@ func (p Plant) String() string {
 
 func TestXml(t *testing.T) {
 	assert.Equal(t, 1, 1)
+
+	coffee := &Plant{ID: 27, Name: "Coffee"}
+	coffee.Origin = []string{"Ethiopia", "Brazil"}
 }
