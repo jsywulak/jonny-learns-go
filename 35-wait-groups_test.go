@@ -12,7 +12,7 @@ var workercount int = 0
 
 func waitgroupworker(id int, wg *sync.WaitGroup) {
 	workercount++
-	time.Sleep(time.Millisecond * 30)
+	time.Sleep(time.Millisecond)
 	wg.Done()
 }
 
