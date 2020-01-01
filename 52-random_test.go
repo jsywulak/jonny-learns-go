@@ -12,9 +12,11 @@ import (
 func TestRandom(t *testing.T) {
 	fmt.Println(rand.Intn(100), rand.Intn(100))
 
-	randFloat := rand.Float64()
-	assert.True(t, 0.0 <= randFloat && randFloat < 1.0)
-	fmt.Println(rand.Float64() * 5)
+	randFloat1 := rand.Float64()
+	assert.True(t, 0.0 <= randFloat1 && randFloat1 < 1.0)
+	randFloat2 := (rand.Float64() * 5)
+	assert.True(t, 0.0 <= randFloat2 && randFloat2 < 5.0)
+
 	fmt.Println((rand.Float64() * 5) + 5)
 
 	s1 := rand.NewSource(time.Now().UnixNano())
