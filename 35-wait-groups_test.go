@@ -23,6 +23,6 @@ func TestWaitGroups(t *testing.T) {
 		go waitgroupworker(i, &wg)
 	}
 	wg.Wait()
-	time.Sleep(time.Millisecond * 100)
+	time.Sleep(time.Millisecond * 1000)
 	assert.Equal(t, 5, workercount, "should have five workers")
 }
