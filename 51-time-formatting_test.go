@@ -29,5 +29,5 @@ func TestTimeFormatting(t *testing.T) {
 
 	ansic := "Mon Jan _2 15:04:05 2006"
 	_, e := time.Parse(ansic, "8:41PM")
-	fmt.Println(e)
+	assert.Equal(t, `parsing time "8:41PM" as "Mon Jan _2 15:04:05 2006": cannot parse "8:41PM" as "Mon"`, e.Error())
 }
