@@ -22,12 +22,14 @@ func (p Plant) String() string {
 func TestXml(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
+	var result string
+
 	coffee := &Plant{ID: 27, Name: "Coffee"}
 	coffee.Origin = []string{"Ethiopia", "Brazil"}
 
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
-	fmt.Println(string(out))
-
+	result = string(out)
+	assert.NotNil(t, result)
 	fmt.Println(xml.Header + string(out))
 
 	var p Plant
