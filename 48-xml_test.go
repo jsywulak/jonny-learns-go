@@ -27,9 +27,14 @@ func TestXml(t *testing.T) {
 
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
 	actual = string(out)
-
+	expected := ` <plant id="27">
+	<name>Coffee</name>
+	<origin>Ethiopia</origin>
+	<origin>Brazil</origin>
+  </plant>`
 	assert.NotNil(t, actual)
 	fmt.Println(string(out))
+	fmt.Println(expected)
 	fmt.Println(xml.Header + string(out))
 
 	var p Plant
