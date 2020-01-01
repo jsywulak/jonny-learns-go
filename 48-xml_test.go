@@ -44,4 +44,7 @@ func TestXml(t *testing.T) {
 	}
 	nesting := &Nesting{}
 	nesting.Plants = []*Plant{coffee, tomato}
+
+	out, _ = xml.MarshalIndent(nesting, " ", "  ")
+	fmt.Println(string(out))
 }
