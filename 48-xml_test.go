@@ -50,6 +50,7 @@ func TestXml(t *testing.T) {
 	fmt.Println(p)
 	expected = "Plant id=27, name=Coffee, origin=[Ethiopia Brazil]"
 	actual = p.String()
+	assert.Equal(t, expected, actual)
 
 	tomato := &Plant{ID: 81, Name: "Tomato"}
 	tomato.Origin = []string{"Mexico", "California"}
