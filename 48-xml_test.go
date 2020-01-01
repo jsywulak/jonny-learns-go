@@ -35,4 +35,7 @@ func TestXml(t *testing.T) {
 		panic(err)
 	}
 	fmt.Println(p)
+
+	tomato := &Plant{ID: 81, Name: "Tomato"}
+	tomato.Origin = []string{"Mexico", "California"}
 }
