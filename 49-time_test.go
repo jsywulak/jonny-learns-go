@@ -38,4 +38,6 @@ func TestTime(t *testing.T) {
 	fmt.Println(diff.Seconds())
 	fmt.Println(diff.Nanoseconds())
 
+	fmt.Println(then.Add(diff))
+	fmt.Println(then.Add(-diff))
 }
