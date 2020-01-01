@@ -38,4 +38,8 @@ func TestXml(t *testing.T) {
 
 	tomato := &Plant{ID: 81, Name: "Tomato"}
 	tomato.Origin = []string{"Mexico", "California"}
+	type Nesting struct {
+		XMLName xml.Name `xml:"nesting"`
+		Plants  []*Plant `xml:"parent>child>plant"`
+	}
 }
