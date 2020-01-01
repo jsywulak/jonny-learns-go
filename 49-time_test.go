@@ -26,5 +26,9 @@ func TestTime(t *testing.T) {
 	fmt.Println(then.Second())
 	fmt.Println(then.Nanosecond())
 	fmt.Println(then.Location())
+	fmt.Println(then.Weekday())
+	fmt.Println(then.Before(now))
+	fmt.Println(then.After(now))
+	fmt.Println(then.Equal(now))
 
 }
