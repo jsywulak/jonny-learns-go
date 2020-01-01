@@ -61,7 +61,6 @@ func TestXml(t *testing.T) {
 	nesting.Plants = []*Plant{coffee, tomato}
 
 	out, _ = xml.MarshalIndent(nesting, " ", "  ")
-	fmt.Println(string(out))
 	actual = string(out)
 	expected = ` <nesting>
    <parent>
