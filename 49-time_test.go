@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -12,7 +11,7 @@ func TestTime(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	now := time.Now()
-	fmt.Println(now)
+	// fmt.Println(now)
 
 	then := time.Date(
 		2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
