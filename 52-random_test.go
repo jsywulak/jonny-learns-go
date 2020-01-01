@@ -25,4 +25,8 @@ func TestRandom(t *testing.T) {
 
 	fmt.Println(r1.Intn(100), r1.Intn(100))
 
+	s2 := rand.NewSource(42)
+	r2 := rand.New(s2)
+	fmt.Println(r2.Intn(100), r2.Intn(100))
+
 }
