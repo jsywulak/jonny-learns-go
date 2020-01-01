@@ -30,4 +30,9 @@ func TestXml(t *testing.T) {
 
 	fmt.Println(xml.Header + string(out))
 
+	var p Plant
+	if err := xml.Unmarshal(out, &p); err != nil {
+		panic(err)
+	}
+
 }
