@@ -32,7 +32,6 @@ func TestTime(t *testing.T) {
 	assert.False(t, then.Equal(now))
 
 	diff := now.Sub(then)
-	fmt.Println(diff)
 
 	assert.True(t, diff.Hours() > float64(88728.26597803133))
 	assert.True(t, diff.Minutes() > float64(5.323697626748746e+06))
@@ -43,6 +42,7 @@ func TestTime(t *testing.T) {
 		2020, 01, 01, 01, 01, 01, 651387237, time.UTC)
 
 	diff = thenAgain.Sub(then)
+	fmt.Println(diff)
 
 	assert.Equal(t, "2020-01-01 01:01:01.651387237 +0000 UTC", then.Add(diff).String())
 	assert.Equal(t, "1999-10-05 16:08:55.651387237 +0000 UTC", then.Add(-diff).String())
