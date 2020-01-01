@@ -34,7 +34,6 @@ func TestRandom(t *testing.T) {
 	r3 := rand.New(s3)
 	r3_1 := r3.Intn(100)
 	r3_2 := r3.Intn(100)
-	fmt.Println(r3.Intn(100), r3.Intn(100))
 	assert.Equal(t, r2_1, r3_1)
 	assert.Equal(t, r2_2, r3_2)
 
