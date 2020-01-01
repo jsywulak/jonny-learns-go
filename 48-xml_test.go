@@ -42,4 +42,6 @@ func TestXml(t *testing.T) {
 		XMLName xml.Name `xml:"nesting"`
 		Plants  []*Plant `xml:"parent>child>plant"`
 	}
+	nesting := &Nesting{}
+	nesting.Plants = []*Plant{coffee, tomato}
 }
