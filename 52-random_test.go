@@ -10,8 +10,6 @@ import (
 )
 
 func TestRandom(t *testing.T) {
-	fmt.Print(rand.Intn(100), ",")
-	fmt.Println(rand.Intn(100))
 	fmt.Println(rand.Intn(100), rand.Intn(100))
 
 	fmt.Println(rand.Float64())
