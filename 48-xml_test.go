@@ -35,7 +35,7 @@ func TestXml(t *testing.T) {
 	assert.Equal(t, expected, actual)
 	actual = (xml.Header + string(out))
 	fmt.Println(actual)
-	expected := `<?xml version="1.0" encoding="UTF-8"?>
+	expected = `<?xml version="1.0" encoding="UTF-8"?>
  <plant id="27">
    <name>Coffee</name>
    <origin>Ethiopia</origin>
