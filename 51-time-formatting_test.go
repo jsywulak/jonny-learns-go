@@ -24,7 +24,8 @@ func TestTimeFormatting(t *testing.T) {
 	t2, _ := time.Parse(form, "8 41 PM")
 	assert.Equal(t, "0000-01-01 20:41:00 +0000 UTC", t2.String())
 
-	fmt.Printf("%d-%02d-%02dT%02d:%02d:%02d-00:00\n", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second())
+	actual := fmt.Sprintf("%d-%02d-%02dT%02d:%02d:%02d-00:00", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second())
+	assert.Equal(t, "2020-01-01T01:01:01-00:00", actual)
 
 	ansic := "Mon Jan _2 15:04:05 2006"
 	_, e := time.Parse(ansic, "8:41PM")
