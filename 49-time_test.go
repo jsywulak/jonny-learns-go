@@ -35,9 +35,7 @@ func TestTime(t *testing.T) {
 	fmt.Println(diff)
 	fmt.Printf("%T\n", diff)
 
-	fmt.Println(diff.Hours())
-	fmt.Printf("%T\n", diff.Hours())
-	fmt.Println(diff.Hours() > float64(88728.26597803133))
+	assert.True(t, diff.Hours() > float64(88728.26597803133))
 
 	fmt.Println(diff.Minutes())
 	fmt.Printf("%T\n", diff.Minutes())
