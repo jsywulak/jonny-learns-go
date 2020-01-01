@@ -16,8 +16,8 @@ func TestRandom(t *testing.T) {
 	assert.True(t, 0.0 <= randFloat1 && randFloat1 < 1.0)
 	randFloat2 := (rand.Float64() * 5)
 	assert.True(t, 0.0 <= randFloat2 && randFloat2 < 5.0)
-
-	fmt.Println((rand.Float64() * 5) + 5)
+	randFloat3 := ((rand.Float64() * 5) + 5)
+	assert.True(t, 5.0 <= randFloat3 && randFloat3 < 10.0)
 
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
