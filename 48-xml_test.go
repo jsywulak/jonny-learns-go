@@ -80,5 +80,6 @@ func TestXml(t *testing.T) {
    </parent>
  </nesting>`
 	assert.Equal(t, expected, actual)
-
+	iReallyHateXML := true
+	assert.True(t, iReallyHateXML)
 }
