@@ -18,6 +18,7 @@ func TestTime(t *testing.T) {
 		2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
 
 	fmt.Println(then)
+	assert.Equal(t, 2009, then.Year())
 	fmt.Println(then.Year())
 	fmt.Println(then.Month())
 	fmt.Println(then.Day())
