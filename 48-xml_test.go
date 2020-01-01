@@ -49,7 +49,7 @@ func TestXml(t *testing.T) {
 	}
 	fmt.Println(p)
 	expected = "Plant id=27, name=Coffee, origin=[Ethiopia Brazil]"
-	actual = string(p.String())
+	actual = p.String()
 
 	tomato := &Plant{ID: 81, Name: "Tomato"}
 	tomato.Origin = []string{"Mexico", "California"}
