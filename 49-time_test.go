@@ -17,7 +17,7 @@ func TestTime(t *testing.T) {
 	then := time.Date(
 		2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
 
-	fmt.Println(then.String())
+	assert.Equal(t, "2009-11-17 20:34:58.651387237 +0000 UTC", then.String())
 	assert.Equal(t, 2009, then.Year())
 	fmt.Println(then.Year())
 	fmt.Println(then.Month())
