@@ -39,6 +39,11 @@ func TestTime(t *testing.T) {
 	assert.True(t, diff.Seconds() > float64(3.194218523991318e+08))
 	assert.True(t, diff.Nanoseconds() > int64(319421847357361763))
 
+	thenAgain := time.Date(
+		2020, 01, 01, 01, 01, 01, 651387237, time.UTC)
+
+	diff = thenAgain.Sub(then)
+
 	fmt.Println(then.Add(diff))
 	fmt.Println(then.Add(-diff))
 }
