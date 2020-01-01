@@ -12,7 +12,8 @@ import (
 func TestRandom(t *testing.T) {
 	fmt.Println(rand.Intn(100), rand.Intn(100))
 
-	fmt.Println(rand.Float64())
+	rand_float := rand.Float64()
+	assert.True(t, 0.0 <= rand_float && rand_float < 1.0)
 	fmt.Println(rand.Float64() * 5)
 	fmt.Println((rand.Float64() * 5) + 5)
 
