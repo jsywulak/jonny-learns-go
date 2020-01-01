@@ -24,5 +24,6 @@ func TestEpoch(t *testing.T) {
 	assert.Equal(t, int64(1577840461651387237), nanos)
 
 	fmt.Println(time.Unix(secs, 0))
+	assert.Equal(t, "2019-12-31 20:01:01 -0500 EST", time.Unix(secs, 0))
 	fmt.Println(time.Unix(0, nanos))
 }
