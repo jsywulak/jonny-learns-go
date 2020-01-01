@@ -47,7 +47,6 @@ func TestXml(t *testing.T) {
 	if err := xml.Unmarshal(out, &p); err != nil {
 		panic(err)
 	}
-	fmt.Println(p)
 	expected = "Plant id=27, name=Coffee, origin=[Ethiopia Brazil]"
 	actual = p.String()
 	assert.Equal(t, expected, actual)
