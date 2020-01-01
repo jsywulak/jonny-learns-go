@@ -14,6 +14,7 @@ func TestTimeFormatting(t *testing.T) {
 	now := time.Date(
 		2020, 01, 01, 01, 01, 01, 651387237, time.UTC)
 	fmt.Println(now.Format(time.RFC3339))
+	assert.Equal(t, "2020-01-01T01:01:01Z", now.Format(time.RFC3339))
 	t1, _ := time.Parse(time.RFC3339, "2012-11-01T22:08:41+00:00")
 	assert.Equal(t, "2012-11-01 22:08:41 +0000 +0000", t1.String())
 	fmt.Println(now.Format("3:04PM"))
