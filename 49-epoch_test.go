@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -11,5 +12,7 @@ func TestEpoch(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
 	now := time.Now()
-
+	secs := now.Unix()
+	nanos := now.UnixNano()
+	fmt.Println(nanos, secs)
 }
