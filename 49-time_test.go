@@ -45,5 +45,6 @@ func TestTime(t *testing.T) {
 	diff = thenAgain.Sub(then)
 
 	fmt.Println(then.Add(diff))
+	assert.Equal(t, "2020-01-01 01:01:01.651387237 +0000 UTC", then.Add(diff).String())
 	fmt.Println(then.Add(-diff))
 }
