@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/xml"
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,6 +13,10 @@ type Plant struct {
 	ID      int      `xml:"id,attr"`
 	Name    string   `xml:"name"`
 	Origin  []string `xml:"origin"`
+}
+
+func (p Plant) String() string {
+	return fmt.Sprintf("Plant id=%v, name=%v, origin=%v", p.ID, p.Name, p.Origin)
 }
 
 func TestXml(t *testing.T) {
