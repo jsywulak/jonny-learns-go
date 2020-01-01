@@ -33,5 +33,9 @@ func TestTime(t *testing.T) {
 
 	diff := now.Sub(then)
 	fmt.Println(diff)
+	fmt.Println(diff.Hours())
+	fmt.Println(diff.Minutes())
+	fmt.Println(diff.Seconds())
+	fmt.Println(diff.Nanoseconds())
 
 }
