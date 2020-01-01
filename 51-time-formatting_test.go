@@ -24,4 +24,6 @@ func TestTimeFormatting(t *testing.T) {
 	t2, _ := time.Parse(form, "8 41 PM")
 	fmt.Println(t2)
 
+	fmt.Printf("%d-%02d-%02dT%02d:%02d:%02d-00:00\n", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second())
+
 }
