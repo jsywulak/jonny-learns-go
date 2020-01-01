@@ -30,5 +30,4 @@ func TestRandom(t *testing.T) {
 		assert.Equal(t, r2_1, r3_1)
 		assert.Equal(t, r2_2, r3_2)
 	}
-
 }
