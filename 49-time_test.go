@@ -31,4 +31,7 @@ func TestTime(t *testing.T) {
 	fmt.Println(then.After(now))
 	fmt.Println(then.Equal(now))
 
+	diff := now.Sub(then)
+	fmt.Println(diff)
+
 }
