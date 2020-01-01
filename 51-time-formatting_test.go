@@ -19,8 +19,7 @@ func TestTimeFormatting(t *testing.T) {
 	assert.Equal(t, "1:01AM", now.Format("3:04PM"))
 	assert.Equal(t, "Wed Jan  1 01:01:01 2020", now.Format("Mon Jan _2 15:04:05 2006"))
 	assert.Equal(t, "Wed Jan  1 2020 01:01:01", now.Format("Mon Jan _2 2006 15:04:05"))
-
-	fmt.Println(now.Format("2006-01-02-T15:04:05.999999-07:00"))
+	assert.Equal(t, "2020-01-01-T01:01:01.651387+00:00", now.Format("2006-01-02-T15:04:05.999999-07:00"))
 	form := "3 04 PM"
 	t2, _ := time.Parse(form, "8 41 PM")
 	fmt.Println(t2)
