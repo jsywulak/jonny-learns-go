@@ -27,9 +27,9 @@ func TestTime(t *testing.T) {
 	assert.Equal(t, 651387237, then.Nanosecond())
 	assert.Equal(t, "UTC", then.Location().String())
 	assert.Equal(t, "Tuesday", then.Weekday().String())
-	fmt.Println(then.Before(now))
-	fmt.Println(then.After(now))
-	fmt.Println(then.Equal(now))
+	assert.True(t, then.Before(now))
+	assert.False(t, then.After(now))
+	assert.False(t, then.Equal(now))
 
 	diff := now.Sub(then)
 	fmt.Println(diff)
