@@ -79,5 +79,6 @@ func TestXml(t *testing.T) {
      </child>
    </parent>
  </nesting>`
+	assert.Equal(t, expected, actual)
 
 }
