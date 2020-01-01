@@ -71,13 +71,13 @@ func TestXml(t *testing.T) {
         <origin>Ethiopia</origin>
         <origin>Brazil</origin>
       </plant>
-<plant id="81">
-<name>Tomato</name>
-<origin>Mexico</origin>
-<origin>California</origin>
-</plant>
-</child>
-</parent>
-</nesting>`
+      <plant id="81">
+        <name>Tomato</name>
+        <origin>Mexico</origin>
+        <origin>California</origin>
+      </plant>
+    </child>
+  </parent>
+ </nesting>`
 
 }
