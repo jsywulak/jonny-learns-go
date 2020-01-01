@@ -12,13 +12,14 @@ import (
 func TestRandom(t *testing.T) {
 	fmt.Println(rand.Intn(100), rand.Intn(100))
 
+	for (int i := 0; i < 100; ++ i) {
 	randFloat1 := rand.Float64()
 	assert.True(t, 0.0 <= randFloat1 && randFloat1 < 1.0)
 	randFloat2 := (rand.Float64() * 5)
 	assert.True(t, 0.0 <= randFloat2 && randFloat2 < 5.0)
 	randFloat3 := ((rand.Float64() * 5) + 5)
 	assert.True(t, 5.0 <= randFloat3 && randFloat3 < 10.0)
-
+	}
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
 
