@@ -20,15 +20,15 @@ func (p Plant) String() string {
 }
 
 func TestXml(t *testing.T) {
-	var result string
+	var actual string
 
 	coffee := &Plant{ID: 27, Name: "Coffee"}
 	coffee.Origin = []string{"Ethiopia", "Brazil"}
 
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
-	result = string(out)
+	actual = string(out)
 
-	assert.NotNil(t, result)
+	assert.NotNil(t, actual)
 	fmt.Println(string(out))
 	fmt.Println(xml.Header + string(out))
 
