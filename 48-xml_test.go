@@ -28,4 +28,6 @@ func TestXml(t *testing.T) {
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
 	fmt.Println(string(out))
 
+	fmt.Println(xml.Header + string(out))
+
 }
