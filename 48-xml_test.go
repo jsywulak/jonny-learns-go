@@ -33,8 +33,6 @@ func TestXml(t *testing.T) {
    <origin>Brazil</origin>
  </plant>`
 	assert.Equal(t, expected, actual)
-	fmt.Println(string(out))
-	fmt.Println(expected)
 	fmt.Println(xml.Header + string(out))
 
 	var p Plant
