@@ -19,5 +19,6 @@ func TestTimeFormatting(t *testing.T) {
 	fmt.Println(now.Format("3:04PM"))
 	fmt.Println(now.Format("Mon Jan _2 15:04:05 2006"))
 	fmt.Println(now.Format("Mon Jan _2 2006 15:04:05"))
+	fmt.Println(now.Format("2006-01-02-T15:04:05.999999-07:00"))
 
 }
