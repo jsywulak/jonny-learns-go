@@ -10,9 +10,10 @@ import (
 )
 
 func TestRandom(t *testing.T) {
-	fmt.Println(rand.Intn(100), rand.Intn(100))
 
 	for i := 0; i < 1000; i++ {
+		randInt := rand.Intn(100)
+		assert.True(t, 0 <= randInt && randInt < 100)
 		randFloat1 := rand.Float64()
 		assert.True(t, 0.0 <= randFloat1 && randFloat1 < 1.0)
 		randFloat2 := (rand.Float64() * 5)
