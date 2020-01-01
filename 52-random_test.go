@@ -11,7 +11,7 @@ import (
 
 func TestRandom(t *testing.T) {
 
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10000; i++ {
 		randInt := rand.Intn(100)
 		assert.True(t, 0 <= randInt && randInt < 100)
 		randFloat1 := rand.Float64()
