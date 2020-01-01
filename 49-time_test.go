@@ -19,5 +19,12 @@ func TestTime(t *testing.T) {
 
 	fmt.Println(then)
 	fmt.Println(then.Year())
+	fmt.Println(then.Month())
+	fmt.Println(then.Day())
+	fmt.Println(then.Hour())
+	fmt.Println(then.Minute())
+	fmt.Println(then.Second())
+	fmt.Println(then.Nanosecond())
+	fmt.Println(then.Location())
 
 }
