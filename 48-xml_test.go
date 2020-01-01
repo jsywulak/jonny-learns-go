@@ -66,12 +66,12 @@ func TestXml(t *testing.T) {
 	expected = ` <nesting>
    <parent>
      <child>
-	   <plant id="27">
-	     <name>Coffee</name>
-	     <origin>Ethiopia</origin>
-	     <origin>Brazil</origin>
-	   </plant>
-	   <plant id="81">
+       <plant id="27">
+         <name>Coffee</name>
+         <origin>Ethiopia</origin>
+         <origin>Brazil</origin>
+       </plant>
+       <plant id="81">
          <name>Tomato</name>
          <origin>Mexico</origin>
          <origin>California</origin>
