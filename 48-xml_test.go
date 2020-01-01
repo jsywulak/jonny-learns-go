@@ -62,7 +62,7 @@ func TestXml(t *testing.T) {
 
 	out, _ = xml.MarshalIndent(nesting, " ", "  ")
 	fmt.Println(string(out))
-
+	actual = string(out)
 	expected = ` <nesting>
 	<parent>
 	  <child>
