@@ -29,7 +29,9 @@ func TestXml(t *testing.T) {
 
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
 	result = string(out)
+
 	assert.NotNil(t, result)
+	fmt.Println(string(out))
 	fmt.Println(xml.Header + string(out))
 
 	var p Plant
