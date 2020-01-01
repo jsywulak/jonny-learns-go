@@ -64,20 +64,20 @@ func TestXml(t *testing.T) {
 	fmt.Println(string(out))
 	actual = string(out)
 	expected = ` <nesting>
-	<parent>
-   <child>
-	  <plant id="27">
-		<name>Coffee</name>
-		<origin>Ethiopia</origin>
-		<origin>Brazil</origin>
-	  </plant>
-	  <plant id="81">
-		<name>Tomato</name>
-		<origin>Mexico</origin>
-		<origin>California</origin>
-	  </plant>
-	</child>
-  </parent>
-</nesting>`
+   <parent>
+     <child>
+	   <plant id="27">
+	     <name>Coffee</name>
+	     <origin>Ethiopia</origin>
+	     <origin>Brazil</origin>
+	   </plant>
+	   <plant id="81">
+         <name>Tomato</name>
+         <origin>Mexico</origin>
+         <origin>California</origin>
+       </plant>
+     </child>
+   </parent>
+ </nesting>`
 
 }
