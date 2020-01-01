@@ -14,5 +14,10 @@ func TestEpoch(t *testing.T) {
 	now := time.Now()
 	secs := now.Unix()
 	nanos := now.UnixNano()
-	fmt.Println(nanos, secs)
+	millis := nanos / 1000000
+
+	fmt.Println(now)
+	fmt.Println(secs)
+	fmt.Println(millis)
+	fmt.Println(nanos)
 }
