@@ -24,4 +24,8 @@ func TestXml(t *testing.T) {
 
 	coffee := &Plant{ID: 27, Name: "Coffee"}
 	coffee.Origin = []string{"Ethiopia", "Brazil"}
+
+	out, _ := xml.MarshalIndent(coffee, " ", "  ")
+	fmt.Println(string(out))
+
 }
