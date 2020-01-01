@@ -27,10 +27,15 @@ func TestRandom(t *testing.T) {
 
 	s2 := rand.NewSource(42)
 	r2 := rand.New(s2)
-	fmt.Println(r2.Intn(100), r2.Intn(100))
+	r2_1 := r2.Intn(100)
+	r2_2 := r2.Intn(100)
 
 	s3 := rand.NewSource(42)
 	r3 := rand.New(s3)
+	r3_1 := r3.Intn(100)
+	r3_2 := r3.Intn(100)
 	fmt.Println(r3.Intn(100), r3.Intn(100))
+	assert.Equal(t, r2_1, r3_1)
+	assert.Equal(t, r2_2, r3_2)
 
 }
