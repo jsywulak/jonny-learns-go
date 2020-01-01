@@ -11,7 +11,9 @@ import (
 func TestEpoch(t *testing.T) {
 	assert.Equal(t, 1, 1)
 
-	now := time.Now()
+	now := time.Date(
+		2020, 01, 01, 01, 01, 01, 651387237, time.UTC)
+
 	secs := now.Unix()
 	nanos := now.UnixNano()
 	millis := nanos / 1000000
