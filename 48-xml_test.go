@@ -34,5 +34,5 @@ func TestXml(t *testing.T) {
 	if err := xml.Unmarshal(out, &p); err != nil {
 		panic(err)
 	}
-
+	fmt.Println(p)
 }
